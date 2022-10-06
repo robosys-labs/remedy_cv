@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RemedyPortal</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/d5317be683.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="header_section">
+      <header class="header">
+        <div class="nav_bar">
+          <div class="brand_logo">
+            <a href="/">
+              <img
+                class="remedy_logo"
+                alt="remedyportal logo"
+                src="./assets/remedy_logo.png"
+              />
+            </a>
+          </div>
+          <nav class="nav_menu" >
+            <ul class="nav_links">
+              <li class="nav_list_item">
+                <a href="/">Home</a>
+              </li>
+              <li class="nav_list_item">
+                <a href="#packages">Packages</a>
+              </li>
+              <li class="nav_list_item">
+                <a href="#works">How it works</a>
+              </li>
+              <li class="nav_list_item">
+                <a href="#about">About</a>
+              </li>
+              <li class="nav_list_item">
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="nav_button_container">
+            <button class="remedy_btn get_started">Get started</button>
+          </div>
+          <div class="hamburger" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <div class="mobile_menu" id="mob_menu">
+            <div class="close_mobile_nav">
+              <i class="fa-solid fa-xmark" onclick="toggleMenu()"></i>
+            </div>
+            <ul class="nav_links">
+              <li class="nav_list_item">
+                <a href="/">Home</a>
+              </li>
+              <li class="nav_list_item">
+                <a href="#packages">Packages</a>
+              </li>
+              <li class="nav_list_item">
+                <a href="#works">How it works</a>
+              </li>
+              <li class="nav_list_item">
+                <a href="#about">About</a>
+              </li>
+              <li class="nav_list_item">
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+            <div class="nav_button_container">
+              <button class="remedy_btn get_started">Get started</button>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <!-- Beginning of hero section -->
+
+    <div id="hero" class="hero_section">
+      <section class="hero_container">
+        <div class="hero_left">
+          <h1 class="hero_title">
+            Stand Out With a <span>Well-Designed  </span> CV
+          </h1>
+          <p class="hero_desc">
+            A well designed Cv makes you stand out, create your CV with Remedy
+            CV professionals to increase your interview chances today!
+          </p>
+          <button class="remedy_btn hero_btn get_started">Get started</button>
+        </div>
+        <div class="hero_right">
+          <div class="hero_img_container">
+            <img alt="remedy lady model" src="./assets/Lady Imagex.png" />
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Beginning of package section -->
+
+    <div id="packages" class="package_section">
+      <section class="package_container pkg_cont_mob">
+        <div class="package_header pkg_head_mob">
+          <h5>Choose a Package Tailored to Your Need</h5>
+          <p>Increase Your Interview Chances Today!</p>
+        </div>
+        <div class="package_body pkg_body_mob">
+          <div class="basic box">
+            <div class="">
+              <h5 class="box_title">Basic</h5>
+              <h6 class="box_subtitle">NGN 3,000</h6>
+            </div>
+            <div class="box_btn_container">
+              <button class="box_btn remedy_btn get_started">
+                Get started
+              </button>
+            </div>
+
+            <div class="box-details">
+              <p>1 sample template</p>
+              <p>1 pager CV delivered</p>
+              <p>N 1,000 per additional page</p>
+              <p>Maximum of 3 pages submitted for review</p>
+              <p>Basic design with color format and icons</p>
+              <p>Optimized for recruiter software</p>
+              <p>Fine-tuned to Suit Your Industry</p>
+            </div>
+          </div>
+          <div class="standard box">
+            <div class="">
+              <h5 class="box_title">Standard</h5>
+              <h6 class="box_subtitle">NGN 7,500</h6>
+            </div>
+            <div class="box_btn_container">
+              <button class="box_btn remedy_btn get_started">
+                Get started
+              </button>
+            </div>
+            <div class="box-details">
+              <p>1 pager CV delivered</p>
+              <p>N 1,000 per additional page</p>
+              <p>2 sample templates to choose from</p>
+              <p>Optimized for recruiter software</p>
+              <p>
+                A top standard CV that showcases your strenghths and
+                achievements
+              </p>
+              <p>Maximum of 5 pages submitted for review</p>
+              <p>Standard design with color format and icons</p>
+
+              <p>
+                Your CV will be well-tailored to suit the specific industry you
+                are in, or aspire to be in
+              </p>
+            </div>
+          </div>
+          <div class="premium box">
+            <div class="">
+              <h5 class="box_title">Premium</h5>
+              <h6 class="box_subtitle">NGN 12,000</h6>
+            </div>
+            <div class="box_btn_container">
+              <button class="box_btn remedy_btn get_started">
+                Get started
+              </button>
+            </div>
+            <div class="box-details">
+              <p>3 pager CV delivered</p>
+              <p>N 1,000 per additional page</p>
+              <p>Cover letter included</p>
+              <p>
+                A Premium CV that showcases your strengths and achievements.
+              </p>
+              <p>3 sample templates to choose from</p>
+              <p>Maximum of 5 pages submitted for review</p>
+              <p>Premium design with color format and icons</p>
+              <p>Addition of photo</p>
+              <p>Optimized for recruiter software.</p>
+              <p>
+                Your CV will be well-tailored to suit the specific industry you
+                are in, or aspire to be in
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Beginning of HOW IT WORKS section -->
+
+    <div id="#works" class="how_it_works_section">
+      <section class="works_container wkbdy_mob">
+        <div class="works_header">
+          <h5>How it works</h5>
+        </div>
+        <div class="works_body">
+          <div class="works_card">
+            <div class="icon_container">
+              <img class="step_icon" src="./assets/step1icon.png" />
+            </div>
+            <div class="works_card_text_content">
+              <h6>Step 1</h6>
+              <p>
+                Select the package you want. You will then need to tell us a
+                little bit more about yourself. Click 'Submit' when you are
+                done.
+              </p>
+            </div>
+          </div>
+          <div class="works_card">
+            <div class="icon_container">
+              <img class="step_icon" src="./assets/step2icon.png" />
+            </div>
+            <div class="works_card_text_content">
+              <h6>Step 2</h6>
+              <p>You can choose to pay via bank transfer or online.</p>
+            </div>
+          </div>
+          <div class="works_card">
+            <div class="icon_container">
+              <img class="step_icon" src="./assets/step3icon.png" />
+            </div>
+            <div class="works_card_text_content">
+              <h6>Step 3</h6>
+              <p>
+                Once your payment is confirmed, We will begin working on your
+                order.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Beginning of ABOUT REMEDY section -->
+
+    <div class="about_remedy_section">
+      <section id="#about" class="about_remedy_container arc_mob">
+        <div class="about_remedy_left">
+          <div class="about_img_container">
+            <img src="./assets/Shape Edit.png" alt="" class="about_img" />
+          </div>
+        </div>
+        <div class="about_remedy_right">
+          <h5>About Remedy CV</h5>
+          <div class="about_details">
+            <p>
+              Remedy CV is an easy to use platform that helps you Optimize,
+              Create and revamp your Cv to increase your chances of getting
+              interviews in just few clicks. You can also apply for jobs easily
+              from anywhere in Nigeria on the Remedy platform.
+            </p>
+            <p>
+              The Remedy App is also available for download on IOS and Android
+              Devices, Giving you premium access to other Remedy services Asides
+              Our Cv optimization service. The most amazing thing about the
+              Remedy platform is you can use all of our services from the
+              comfort of your mobile phone, with swift responses from the Remedy
+              team.
+            </p>
+            <p>
+              With over 4327 users, amazing reviews and top notch services … we
+              can only keep getting better. We are always available for you...
+            </p>
+          </div>
+          <button class="about_btn remedy_btn get_started">Get started</button>
+        </div>
+      </section>
+    </div>
+
+    <!-- Beginning of CONTACT US section -->
+    <div class="contact_us_section">
+      <section class="contact_us_container contact_us_mob" id="contact">
+        <div class="contact_us_header">
+          <h5>Contact us</h5>
+        </div>
+        <div class="contact_us_form">
+          <div class="contact_form_left">
+            <h5>Let's talk</h5>
+            <p class="drop_message">
+              Kindly drop your messages and we will get in touch shortly
+            </p>
+            <div class="contact_socials">
+              <div class="contact_whatsapp">
+                <span><i class="fa-brands fa-whatsapp"></i></span>
+                <p>+234 913 444 5884</p>
+              </div>
+              <div class="contact_email">
+                <span><i class="fa-regular fa-envelope"></i></span>
+                <p>info@remedycv.com</p>
+              </div>
+              <div class="contact_other_socials">
+                <a
+                  href="https://m.facebook.com/profile.php?id=100063907452944&_rdr"
+                  ><i class="fa-brands fa-facebook"></i
+                ></a>
+                <a href="https://www.linkedin.com/company/remedy-portal/"
+                  ><i class="fa-brands fa-linkedin"></i
+                ></a>
+                <a href="https://www.instagram.com/remedyportal/"
+                  ><i class="fa-brands fa-square-instagram"></i
+                ></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="contact_form_right">
+            <form class="contact_form">
+              <div class="name_email">
+                <div class="name_container">
+                  <label for="contact_name">Name</label>
+                  <input
+                    id="contact_name"
+                    placeholder="E.g Jane Doe"
+                    type="text"
+                    class="form_name"
+                  />
+                </div>
+                <div class="email_container">
+                  <label for="contact_email">Email</label>
+                  <input id="contact_email" placeholder="E.g you@gmail.com" />
+                </div>
+              </div>
+              <div class="message_input_container">
+                <label for="contact_message">Message</label>
+                <textarea
+                  id="contact_message"
+                  placeholder="Kindly type your message"
+                ></textarea>
+              </div>
+              <input
+                class="remedy_btn form_submit_btn form_btn_overwrite"
+                type="submit"
+                value="send"
+              />
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Beginning of Modal 1 -->
+
+    <div class="modal_1_container" id="form_modal_id">
+      <div class="modal_1 overwrite_modal">
+        <span class="modal_1_close"
+          ><i class="fa-solid fa-circle-xmark" id="close_modal_1"></i
+        ></span>
+        <div style="z-index: 2">
+          <h6>Do you want a CV redesign or a Fresh CV?</h6>
+          <p>
+            (Kindly note that an additional of NGN 2,000 will be charged on any
+            package for all fresh CVs)
+          </p>
+          <div class="modal1_btn_container">
+            <a
+              style="text-decoration: none"
+              href="./fresh_cv_pages/fresh_cv1/fresh_cv_form1.html"
+              class="remedy_btn modal1_btn"
+              >Fresh CV</a
+            >
+            <button class="remedy_outline_btn">A Redesign</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Beginning of FOOTER section -->
+    <div class="footer_section">
+      <footer class="footer_section_container" id="remedy_footer">
+        <div class="top_footer_section overwrite_footer">
+          <div class="remedy_brand_identity">
+            <div class="brand_logo">
+              <a href="/">
+                <img
+                  src="./assets/remedy_logo.png"
+                  alt=""
+                  class="remedy_logo"
+                />
+              </a>
+            </div>
+            <p class="remedy_brand_desc">
+              Remedy Cv is a platform that aims at providing users with a better
+              experience of the basic Job needs to help keep them productive,
+              updated, And employed.
+            </p>
+          </div>
+          <div class="remedy_contact_info">
+            <h6>Contact Info</h6>
+            <div class="remedy_address">
+              <span><i class="fa-solid fa-location-dot"></i></span>
+              <p>4 Abiodun Awosika Street, Lekki Phase 1, Lagos State</p>
+            </div>
+          </div>
+          <div class="remedy_subscribe">
+            <h6>Subscribe</h6>
+            <p>
+              Be the first to know about all our amazing new features and
+              existing products and offers
+            </p>
+            <div class="sub_input_container">
+              <input class="sub_input" id="subscibe_input" type="text" />
+              <button class="subscribe_submit_btn">
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="bottom_footer_section">
+          <p>Copyright ©2022 All rights reserved | Remedy CV</p>
+        </div>
+      </footer>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
