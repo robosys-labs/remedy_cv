@@ -1359,7 +1359,7 @@ footer h6{
     border: 0;
     border-radius: 2rem;
     padding: .5rem;
-    width: 80%;
+    width: 76%;
 }
 
 .sub_input:focus{
@@ -1377,7 +1377,7 @@ footer h6{
     border: 0;
     cursor: pointer;
     transition: .4s all ease;
-    width: 3rem;
+    width: 20%;
     height: 3rem;
     transition: .4s all ease;
    
