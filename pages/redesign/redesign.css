@@ -594,7 +594,7 @@ form .prev_btn:hover {
 
 
 
-@media screen and (max-width:400px) {
+@media screen and (max-width:420px) {
     .nav_links{
         display: none;
     }
@@ -764,7 +764,7 @@ footer h6{
 
 
 
-@media screen and (max-width:400px)  {
+@media screen and (max-width:420px)  {
 
 .form_submit_btn.form_btn_overwrite{
     width: 100%;

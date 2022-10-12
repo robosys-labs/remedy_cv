@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RemedyPortal</title>
-    <link rel="stylesheet" href="redesign_cv.css" />
+    <link rel="stylesheet" href="redesign.css" />
     <script
       src="https://kit.fontawesome.com/d5317be683.js"
       crossorigin="anonymous"
@@ -107,7 +107,7 @@
         <div class="form_redesign_input_container ">
           <div class="full_name_container">
             <label for="full_name_id_redesign">Full name</label>
-            <input oninput="this.className = ''"
+            <input oninput="this.className = 'form_redesign_long_inputs'"
             class="form_redesign_long_inputs"
               type="text"
               placeholder="Enter full name (e.g John Doe)"
@@ -115,25 +115,25 @@
             />
           </div>
           <div class="email_container">
-            <label for="email_id_redesign">Enter email</label>
-            <input oninput="this.className = ''" class="form_redesign_long_inputs" type="text" placeholder="Enter email" id="email_id_redesign" />
+            <label for="email_id_pay">Enter email</label>
+            <input oninput="this.className = 'form_redesign_long_inputs'" class="form_redesign_long_inputs" type="text" placeholder="Enter email" id="email_id_pay" />
           </div>
           <div class="phone_number_container">
             <label for="phone_number_id_redesign">Phone</label>
-            <input oninput="this.className = ''" class="form_redesign_long_inputs" type="text" placeholder="Enter phone no." id="phone_number_id_redesign" />
+            <input oninput="this.className = 'form_redesign_long_inputs'" class="form_redesign_long_inputs" type="text" placeholder="Enter phone no." id="phone_number_id_redesign" />
           </div>
 
           <div class="number_pages_container">
             <label for="number_pages_id_redesign">Enter the number of pages you want</label>
-            <input oninput="this.className = ''" class="form_redesign_long_inputs" type="text" placeholder="Enter the number of pages you want" id="number_pages__id_redesign" />
+            <input oninput="this.className = 'form_redesign_long_inputs'" class="form_redesign_long_inputs"type="text" placeholder="Enter the number of pages you want" id="number_pages__id_redesign" />
           </div>
           <div class="package_container">
-            <label for="package_id_redesign">Your package</label>
+            <label for="cv_package_id">Your package</label>
             <select name="" id="cv_package_id" class="form_redesign_long_inputs">
                 <option value="null">select your package</option>
-                <option value="3000">Basic <span>3000</span></option>
-                <option value="7500">Standard <span>7500</span></option>
-                <option value="12000">Premium <span>12000</span></option>
+                <option value="3000">Basic <span> 3000 Naira</span></option>
+                <option value="7500">Standard <span> 7500 Naira</span></option>
+                <option value="12000">Premium <span> 12000 Naira</span></option>
             </select>
           </div>
           <div class="upload_method_container">
@@ -165,44 +165,19 @@ to the Email provided within 48hrs
               </div>
             </div>
           </div>
-         
-          
+    
         </div>
        
       </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-       
            <div class="next_btn_container">
-            <button type="button"  class="remedy_btn form1_submit_btn" id="next_btn" onclick="nextPrev(1)"
+            <button type="button"  class="remedy_btn form1_submit_btn" id="next_btn" onclick="payParam()"
               >Proceed to payment <span><i class="fa-solid fa-arrow-right"></i></span
             ></button>
           </div>
 
-
         </form>
-       
 
-
-
-
-
-
-
-
-
-        
       </section>
     </div>
 
@@ -277,6 +252,7 @@ to the Email provided within 48hrs
         </div>
       </footer>
     </div>
+    <script src="https://js.paystack.co/v1/inline.js"></script> 
     <script src="../../js/redesign_CV.js"></script>
     <script src="../../js/paymentGateway.js"></script>
   </body>
