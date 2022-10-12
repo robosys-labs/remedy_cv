@@ -10,19 +10,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* General styles start here */
 
 *{
@@ -33,7 +20,9 @@
    
 }
 
-
+p{
+    margin: 4%;
+}
 .remedy_btn{
     color: #fff;
     font-size: 1rem;
@@ -78,11 +67,6 @@
 }
 
 
-
-
-
-
-
 /* Modal 1 styles start  here  */
 .payment_modal_container{
     width: 100vw;
@@ -96,9 +80,6 @@
     justify-content: center;
     align-items: center;
 }
-
-
-
 
 .payment_modal{
     height: 80%;
@@ -125,13 +106,40 @@
    gap: 1rem;
 }
 
+.back_btn_container{
+    margin: 2%;
+}
 
 .success_gif_payment{
-    width: 4rem;
-    height: 4rem;
+    width: 30%;
+    height: 28%;
+    position: relative;
+    left: 35%;
 }
 
 .success_gif_payment img{
     width: 100%;
+    height: 100%;
 
+}
+@media screen and (max-width:1000px)  {
+    .pay_success{
+        height: 67%; 
+    }
+    .success_gif_payment{
+        width: 35%;
+        height: 32%;
+        position: relative;
+        left: 32.5%;
+    }
+    .payment_modal{
+        height: 80%;
+        width: 70%;
+    }
+}
+@media screen and (max-width:420px)  {
+    .payment_modal{
+        height: 80%;
+        width: 90%;
+    }
 }
