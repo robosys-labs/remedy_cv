@@ -20,11 +20,11 @@
               <img
                 class="remedy_logo"
                 alt="remedyportal logo"
-                src="../../assets/remedy_logo.png"
+                src="./../../assets/remedy_logo.png"
               />
             </a>
           </div>
-          <nav class="nav_menu">
+          <nav class="nav_menu" >
             <ul class="nav_links">
               <li class="nav_list_item">
                 <a href="/">Home</a>
@@ -46,6 +46,34 @@
           <div class="nav_button_container">
             <button class="remedy_btn get_started">Get started</button>
           </div>
+          <div class="hamburger" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <div class="mobile_menu" id="mob_menu">
+            <div class="close_mobile_nav">
+              <i class="fa-solid fa-xmark" onclick="toggleMenu()"></i>
+            </div>
+            <ul class="nav_links">
+              <li class="nav_list_item">
+                <a href="/">Home</a>
+              </li>
+              <li class="nav_list_item">
+                <a href="#packages">Packages</a>
+              </li>
+              <li class="nav_list_item">
+                <a href="#works">How it works</a>
+              </li>
+              <li class="nav_list_item">
+                <a href="#about">About</a>
+              </li>
+              <li class="nav_list_item">
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+            <div class="nav_button_container">
+              <button class="remedy_btn get_started">Get started</button>
+            </div>
+          </div>
         </div>
       </header>
     </div>
@@ -63,7 +91,7 @@
           </p>
         </div>
       <form id="mother_form_container">
-        <span  id="prevBtn" class="prev_btn"><i class="fa-solid back_form fa-arrow-left" onclick="nextPrev(-1)"></i></span>
+      
        
 
 
@@ -101,23 +129,40 @@
           </div>
           <div class="package_container">
             <label for="package_id_redesign">Your package</label>
-            <select name="" id="package_id_redesign" class="form_redesign_long_inputs">
+            <select name="" id="cv_package_id" class="form_redesign_long_inputs">
                 <option value="null">select your package</option>
-                <option value="Basic">Basic</option>
-                <option value="Standard">Standard</option>
-                <option value="Premium">Premium</option>
+                <option value="3000">Basic <span>3000</span></option>
+                <option value="7500">Standard <span>7500</span></option>
+                <option value="12000">Premium <span>12000</span></option>
             </select>
           </div>
           <div class="upload_method_container">
-            <h6></h6>
+            <h6>
+              Choose Upload Method
+            </h6>
             <div class="device_options">
                 <div class="from_device">
-                    <input type="radio"/> <p>From device</p>
+                    <input onchange="showUpload(1)" id="device_input_id" name="radio_upload" type="radio" value="uploadHere"/> <p>From device</p>
                 </div>
 
                 <div class="via_mail">
-                    <input type="radio"/> <p>Send via mail</p>
+                    <input id="email_input_id" name="radio_upload" type="radio" value="email" onchange="showUpload(2)"/> <p>Send via mail</p>
                 </div>
+            </div>
+
+            <div id="upload_area_id" class="upload_area">
+              <input type="file" class="choose_file" id="choose_file_upload" accept="image/png, image/jpg, image/gif, image/jpeg, image/pdf">
+            </div>
+
+            <div class="send_via_email_container" id="send_via_email_id">
+              <div class="send_via_email">
+                <p>Please  send your CV to cv@remedyportal.com 
+                  after payment in the next step</p>
+                  <p class="sec_child">
+                    Kindly note that Revamped CV will be sent 
+to the Email provided within 48hrs
+                  </p>
+              </div>
             </div>
           </div>
          
@@ -141,7 +186,7 @@
        
            <div class="next_btn_container">
             <button type="button"  class="remedy_btn form1_submit_btn" id="next_btn" onclick="nextPrev(1)"
-              >Next <span><i class="fa-solid fa-arrow-right"></i></span
+              >Proceed to payment <span><i class="fa-solid fa-arrow-right"></i></span
             ></button>
           </div>
 
@@ -185,10 +230,11 @@
 
 
 
+ 
     <!-- Beginning of FOOTER section -->
     <div class="footer_section">
       <footer class="footer_section_container" id="remedy_footer">
-        <div class="top_footer_section">
+        <div class="top_footer_section overwrite_footer">
           <div class="remedy_brand_identity">
             <div class="brand_logo">
               <a href="/">
@@ -219,7 +265,7 @@
               existing products and offers
             </p>
             <div class="sub_input_container">
-              <input oninput="this.className = ''" class="sub_input" id="subscibe_input" type="text" />
+              <input class="sub_input" id="subscibe_input" type="text" />
               <button class="subscribe_submit_btn">
                 <i class="fa-solid fa-paper-plane"></i>
               </button>
@@ -231,6 +277,7 @@
         </div>
       </footer>
     </div>
-    <script src="./fresh_cv_script.js"></script>
+    <script src="../../js/redesign_CV.js"></script>
+    <script src="../../js/paymentGateway.js"></script>
   </body>
 </html>

@@ -148,7 +148,7 @@ header, section{
 
 
 
-@media screen and (max-width:400px) {
+@media screen and (max-width:420px) {
     .nav_links{
         display: none;
     }
@@ -425,7 +425,7 @@ form .prev_btn:hover {
 
 
 
-@media screen and (max-width:400px) {
+@media screen and (max-width:420px) {
     .form_title{
         
         font-size: 2rem;
@@ -583,14 +583,97 @@ form .prev_btn:hover {
     transition: .4s ease all;
     cursor: pointer;
 }
-.add_experience span:hover{
-   color: var(--remedy_pink);
+
+.school_status{
+    display: flex;
+    align-items: center;
+}
+
+.add_experience{
+    outline: none;
+    padding: .5rem;
+    border: 0;
+    color: var(--remedy_dark_blue);
+    transition: all .4s ease;
+    display: flex;
+    align-items: center;
+}
+
+.add_experience span{
+    font-size: 1rem;
+}
+
+
+.add_experience:hover{
+    color: var(--remedy_pink);
+    cursor: pointer;
+ }
+
+.form_2_added_details_card_parent{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
 }
 
 
 
 
-@media screen and (max-width:400px) {
+
+.form_2_card_cousins{
+    height: 95%;
+    width: 60vw;
+}
+
+
+.form_2_added_details_card{
+    background-color: rgba(245, 246, 250, 0.37);
+    border-radius: .5rem;
+    border: 1px solid var(--remedy_pink);
+    padding: 2rem;
+    margin: 3.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 95%;
+    width: 95%;
+    overflow: hidden;
+    
+}
+
+.added_details_left h4{
+    font-size: 1.2rem;
+    color: var(--remedy_dark_blue);
+    margin-bottom: 1rem;
+
+}
+.added_details_desc p{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.added_details_desc span{
+    font-weight: 600;
+}
+
+.added_details_edit_btn_form_2{
+    outline: none;
+    padding: .5rem;
+    border: 0;
+    color: var(--remedy_pink);
+    transition: all .4s ease;
+}
+
+.added_details_edit_btn_form_2:hover{
+    color: var(--remedy_light_blue);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width:420px) {
     .form_2_body {
         margin: 0;
         padding: 0;
@@ -729,7 +812,58 @@ form .prev_btn {
 
 
 
-@media screen and (max-width:400px) {
+
+
+
+.form_3_added_details_card{
+    background-color: rgba(245, 246, 250, 0.37);
+    border-radius: .5rem;
+    border: 1px solid var(--remedy_pink);
+    padding: 2rem;
+    margin: 3.5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 95%;
+    width: 95%;
+    overflow: hidden;
+    display: none;
+    
+}
+
+.added_details_top{
+ height: 30vh;
+ overflow-x: hidden;
+ 
+}
+
+.added_details_top p{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    
+}
+
+
+.added_details_edit_btn_form_3{
+    outline: none;
+    padding: .5rem;
+    border: 0;
+    color: var(--remedy_pink);
+    transition: all .4s ease;
+}
+
+.added_details_edit_btn_form_3:hover{
+    color: var(--remedy_light_blue);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+
+
+
+
+@media screen and (max-width:420px) {
     .form_3_body {
         margin: 0;
         padding: 0;
@@ -869,7 +1003,7 @@ form .prev_btn {
 
 
 
-@media screen and (max-width:400px) {
+@media screen and (max-width:420px) {
     .form_4_body {
         margin: 0;
         padding: 0;
@@ -993,7 +1127,7 @@ form .prev_btn {
 
 
 
-@media screen and (max-width:400px) {
+@media screen and (max-width:420px) {
     .form_5_body {
         margin: 0;
         padding: 0;
@@ -1123,7 +1257,7 @@ form .prev_btn {
 
 
 
-@media screen and (max-width:400px) {
+@media screen and (max-width:420px) {
     .form_6_body {
         margin: 0;
         padding: 0;
@@ -1265,15 +1399,27 @@ footer h6{
     
 }
 
-.top_footer_section{
-    display: flex;
-    flex-direction: column;
-}
+
 .remedy_brand_identity,  .remedy_contact_info,
  .remedy_subscribe
 {
     width: 100%;
     margin-bottom: 1.5rem;
+}
+
+
+@media screen and (max-width:420px){
+
+    .top_footer_section{
+        display: flex;
+        flex-direction: column;
+    }
+     .remedy_brand_identity,   .remedy_contact_info,
+     .overwrite_footer .remedy_subscribe
+    {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
 }
 
 

@@ -3,7 +3,8 @@
   const allTabs = document.getElementsByClassName("tab");
   const previousBtn = document.getElementById('prevBtn');
   const nextBtn = document.getElementById('next_btn');
-  const mother_form= document.getElementById('mother_form_container')
+  const mother_form= document.getElementById('mother_form_container');
+ 
 
 
 
@@ -107,3 +108,101 @@ function toggleMenu() {
       document.getElementById("mob_menu").style.transform = "translateX(90vw)"
   }
 }
+
+
+
+
+
+
+
+
+// Add More details functions /////////////////////////////////////////////
+
+
+var skillArray = [];
+var schoolArray = [];
+var workArray = [];
+var jobArray = [];
+
+
+
+//form 2/// FOR WORK HISTORY///////////////////////////
+
+function createWorks() {
+  
+workArray.push({
+  start_date: document.getElementById("start_date_id").value,
+  end_date: document.getElementById("end_date_id").value,
+  employer: document.getElementById("employer_id").value,
+  job_title: document.getElementById("job_title_id").value,
+  country: document.getElementById("country_id_form_2").value,
+  current_work: document.getElementById("work_here_status").value,
+});
+console.log(workArray);
+}
+
+
+//form 3/// FOR JOB DESCRIPTION///////////////////////////
+const jobDescContainer = getElementById('job_desc_div');
+
+function createJobDescr() {
+jobArray.push({
+  description: document.getElementById("job_description_input_id").value,
+});
+jobArray.map((item)=>{
+  const node =document.createElement('p');
+  const textnode = item.description
+  node.innerHTML = textnode;
+  document.getElementById("job_desc_div").append(node);
+   document.getElementById("job_description_input_id").value = " ";
+   document.getElementById('job_desc_div_container').style.display='block';
+
+})
+
+console.log(jobArray);
+}
+
+
+
+// form 4 /////////// FOR EDUCATION/////////////////////////
+
+function createSchoolData (){
+  schoolArray.push({
+    school_name:document.getElementById('school_name_id').value,
+    field_study:document.getElementById('field_study_id').value,
+    degree:document.getElementById('degree_type_id').value,
+    city:document.getElementById('city_id_form_4').value,
+    city:document.getElementById('country_id_form_4').value,
+    start_date:document.getElementById('start_date_form_4_id').value,
+    end_date:document.getElementById('end_date_form_4_id').value,
+    current_school:document.getElementById('current_school').value,
+
+
+  })
+  console.log(schoolArray);
+}
+
+
+
+
+
+// form 5 /////////// FOR skill/////////////////////////
+
+function createSkillsData() {
+  
+
+  skillArray.push({skill: document.getElementById('skills_cert_id').value});
+  
+  // var skillSum = document.getElementById("skill_sum");
+  // const ordered = document.createElement("li");
+  skillArray.map((item, i) => {
+    const newTodo = `<a style="width: 20%;color: #fff; padding: 2px" id="listedItems"> ${item.skill}</a>`;
+    // ordered.innerHTML = newTodo;
+    // skillSum.append(ordered);
+    // document.getElementById("skill_val").value = " ";
+  });
+  console.log(skillArray);
+}
+
+
+

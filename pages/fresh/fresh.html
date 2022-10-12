@@ -186,11 +186,54 @@
 
         <div class="form_2_body  tab" id="form_2_body_id">
           <div class="form_progression">
-       
+           
             <h4>Work history</h4>
             <div class="form_2_line"></div>
             <div class="page_number">2/6</div>
           </div>
+         <div class="form_2_added_details_card_parent">
+          <div class="form_2_card_cousins">
+            <div class="form_2_added_details_card">
+              <div class="added_details_left">
+                <h4>Work History 1</h4>
+                <div class="added_details_desc">
+                  <p><span>Job Title:</span> Product Designer</p>
+                  <p><span>Employer:</span> Remedy Portal</p>
+                  <p><span>City:</span> Lagos </p>
+                  <p><span>Country:</span> Nigeria</p>
+                  <p> <span>Start/End Date:</span> I currently work there</p>
+                  
+                </div>
+              </div>
+              <div class="added_details_right">
+                <button  id='added_details_form_2_click' class="added_details_edit_btn_form_2">Edit <i class="fa-solid fa-pen-to-square"></i></button>
+              </div>
+            </div>
+          </div>
+       
+          
+          <!-- hjh -->
+
+          <div class="form_2_card_cousins">
+            <div class="form_2_added_details_card">
+              <div class="added_details_left">
+                <h4>Work History 1</h4>
+                <div class="added_details_desc">
+                  <p><span>Job Title:</span> Product Designer</p>
+                  <p><span>Employer:</span> Remedy Portal</p>
+                  <p><span>City:</span> Lagos </p>
+                  <p><span>Country:</span> Nigeria</p>
+                  <p> <span>Start/End Date:</span> I currently work there</p>
+                  
+                </div>
+              </div>
+              <div class="added_details_right">
+                <button class="added_details_edit_btn_form_2">Edit <i class="fa-solid fa-pen-to-square"></i></button>
+              </div>
+            </div>
+          </div>
+   
+         </div>
           <div class="form_2_input_container ">
             <div class="job_title_container">
               <label for="job_title_id">Job title</label>
@@ -216,12 +259,12 @@
             </div>
             <div class="start_end_date">
               <div class="start_date">
-                <label for="first_name_id">Start date</label>
+                <label for="start_date_id">Start date</label>
                 <input oninput="this.className = 'form_2_long_inputs'"
                 class="form_2_long_inputs"
                   placeholder="Enter Last Name"
                   type="date"
-                  id="first_name_id"
+                  id="start_date_id"
                 />
               </div>
 
@@ -231,20 +274,26 @@
                 class="form_2_long_inputs"
                   placeholder="Enter Last Name"
                   type="date"
-                  id="last_name_id"
+                  id="end_date_id"
                 />
               </div>
             </div>
 
             <div class="work_status_add_experience_container">
               <div class="school_status">
-                <input oninput="this.className = ''" type="checkbox" class="check_school_status"/>
+                <input oninput="this.className = ''" 
+                onchange=""
+                type="checkbox" 
+                class="check_school_status"
+                id="work_here_status"/>
                 <p>I currently work here</p>
               </div>
-              <div class="add_experience">
-                <span><i class="fa-solid fa-circle-plus"></i></span>
+              <button type="button" id="add_experience_id" 
+              onclick="createWorks()"
+              class="add_experience">
+                <span><i class="fa-solid fa-square-plus"></i></span>
                 <p>Add another Experience</p>
-              </div>
+              </button>
             </div>
 
            
@@ -253,11 +302,7 @@
            
             
           </div>
-          <!-- <div class="next_btn_container">
-            <button class="remedy_btn form1_submit_btn" id="formTwoNext"
-              >Next <span><i class="fa-solid fa-arrow-right"></i></span
-            ></button>
-          </div> -->
+        
         </div>
 
 
@@ -284,10 +329,31 @@
             <div class="form_3_line"></div>
             <div class="page_number">3/6</div>
           </div>
+          
+
+          
+            <div id="job_desc_div_container" class="form_3_added_details_card">
+              <div id="job_desc_div" class="added_details_top ">
+                <!-- <p>Identify opportunities for new products.
+                  Analyze how a new product ties in with market needs and consumer preferences.
+                  Set design requirements based on briefs from internal teams and external partners.
+                  Research materials and techniques
+                  Sketch drafts on paper or digitally
+                  Produce prototypes and test functionality.
+                  Improve the design of existing products.
+                  Gather feedback from product users</p> -->
+              </div>
+              <div class="added_details_bottom">
+                <button  id='added_details_form_3_click' class="added_details_edit_btn_form_3">Edit <i class="fa-solid fa-pen-to-square"></i></button>
+              </div>
+            </div>
+          
+
+
           <div class="form_3_input_container ">
             <div class="job_description_container">
               <label for="job_description_id">Job description</label>
-              <textarea name="" id="" cols="30" rows="6" class="form_3_long_inputs"></textarea>
+              <textarea name="" id="job_description_input_id" cols="30" rows="6" class="form_3_long_inputs"></textarea>
              </div>
             </div>
           
@@ -296,19 +362,18 @@
             <div class="school_status_add_experience_container">
               
               <div class="add_description">
-                <span><i class="fa-solid fa-circle-plus"></i></span>
-                <p>Add another  description</p>
+                <button type="button" id="add_experience_id" 
+                onclick="createJobDescr()"
+                class="add_experience">
+                  <span><i class="fa-solid fa-square-plus"></i></span>
+                  <p>Add another Description</p>
+                </button>
               </div>
             </div>
 
            
            
-            
-            <!-- <div class="next_btn_container">
-              <button id="formThreeNext" class="remedy_btn form1_submit_btn"
-                >Next <span><i class="fa-solid fa-arrow-right"></i></span
-              ></button>
-            </div> -->
+           
             
           </div>
           
@@ -346,7 +411,7 @@
             </div>
             <div class="field_study_container">
               <label for="field_study_id">Field of study</label>
-              <input oninput="this.className = 'form_4_long_inputs'" class="form_4_long_inputs" type="text" placeholder="Enter field of study" id="form_4_long_inputs" />
+              <input oninput="this.className = 'form_4_long_inputs'" class="form_4_long_inputs" type="text" placeholder="Enter field of study" id="field_study_id" />
             </div>
             <div class="degree_container">
               <label for="degree_type_id">Degree</label>
@@ -359,7 +424,7 @@
             </div>
             <div class="country_container_form_4">
               <label for="country_id_form_4">Country</label>
-              <input oninput="this.className = 'form_4_long_inputs'" class="form_4_long_inputs" type="text" placeholder="Enter country" id="city_id_form_4" />
+              <input oninput="this.className = 'form_4_long_inputs'" class="form_4_long_inputs" type="text" placeholder="Enter country" id="country_id_form_4" />
             </div>
             <div class="start_end_date_form_4">
               <div class="start_date_form_4">
@@ -385,12 +450,18 @@
 
             <div class="school_status_add_experience_container">
               <div class="school_status">
-                <input oninput="this.className = ''" type="checkbox" class="check_school_status"/>
+                <input oninput="this.className = ''" type="checkbox" 
+                id="current_school"
+                class="check_school_status"/>
                 <p>I currently school here</p>
               </div>
               <div class="add_experience">
-                <span><i class="fa-solid fa-circle-plus"></i></span>
-                <p>Add another School</p>
+                <button type="button" id="add_experience_id" 
+                onclick="createSchoolData()"
+                class="add_experience">
+                  <span><i class="fa-solid fa-square-plus"></i></span>
+                  <p>Add another School</p>
+                </button>
               </div>
             </div>
 
@@ -400,11 +471,7 @@
            
             
           </div>
-          <!-- <div class="next_btn_container">
-            <button id="formFourNext" class="remedy_btn form4_submit_btn"
-              >Next <span><i class="fa-solid fa-arrow-right"></i></span
-            ></button>
-          </div> -->
+        
         </div>
 
 
@@ -429,6 +496,19 @@
             <div class="form_5_line"></div>
             <div class="page_number">5/6</div>
           </div>
+
+          <div id="skills_cert_div_container" class="form_5_added_details_card">
+            <div id="job_desc_div" class="added_details_top ">
+              <ul>
+                <li></li>
+              </ul>
+            </div>
+            <div class="added_details_bottom">
+              <button  id='added_details_form_3_click' class="added_details_edit_btn_form_3">Edit <i class="fa-solid fa-pen-to-square"></i></button>
+            </div>
+          </div>
+
+
           <div class="form_5_input_container ">
             <div class="skills_cert_container">
               <label for="skills_cert_id">Job description</label>
@@ -440,20 +520,20 @@
 
             <div class="add_skill_cert_container">
               
-              <div class="add_skill_cert">
-                <span><i class="fa-solid fa-circle-plus"></i></span>
-                <p>Add another skill or Certification</p>
+              <div class="add_skill_cert" >
+                <button type="button" id="add_skill_id" 
+                onclick="createSkillsData()"
+                class="add_experience">
+                  <span><i class="fa-solid fa-square-plus"></i></span>
+                  <p>Add another Skill or Certification</p>
+                </button>
               </div>
             </div>
 
            
            
             
-            <!-- <div class="next_btn_container">
-              <button id="formFiveNext" class="remedy_btn form1_submit_btn"
-                >Next <span><i class="fa-solid fa-arrow-right"></i></span
-              ></button>
-            </div> -->
+
             
           </div>
           
@@ -494,9 +574,9 @@
               <label for="cv_package_id">Your package</label>
               <select id='cv_package_id' class="form_6_long_inputs">
                 <option>Choose a package</option>
-                <option>Basic</option>
-                <option>Standard</option>
-                <option>Premium</option>
+                <option value="3000">Basic <span>3000</span></option>
+                <option value="7500">Standard <span>7500</span></option>
+                <option value="12000">Premium <span>12000</span></option>
               </select>
              
              </div>
@@ -504,13 +584,7 @@
           
            
 
-            <div class="add_skill_cert_container">
-              
-              <div class="add_skill_cert">
-                <span><i class="fa-solid fa-circle-plus"></i></span>
-                <p>Add another skill or Certification</p>
-              </div>
-            </div>
+            
 
            
            
@@ -615,6 +689,6 @@
         </div>
       </footer>
     </div>
-    <script src="./fresh_cv_script.js"></script>
+    <script src="../../js/fresh_cv_script.js"></script>
   </body>
 </html>

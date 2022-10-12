@@ -14,7 +14,10 @@ function submitCreate() {
   };
   console.log(formData);
 
+
+
         ////// initiate paystack payment window
+  handler.openIframe();
 
   let handler = PaystackPop.setup({
     key: ' ', // Replace with your public key
@@ -26,6 +29,7 @@ function submitCreate() {
       alert('Window closed.');
     },
     callback: function(response){
+      
       let message = 'Payment complete! Reference: ' + response.reference;
       alert(message);
     }
