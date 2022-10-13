@@ -148,7 +148,7 @@ header, section{
 
 
 
-@media screen and (max-width:400px) {
+@media screen and (max-width:420px) {
     .nav_links{
         display: none;
     }
@@ -279,7 +279,7 @@ header, section{
 
 
 
-@media screen and (max-width:400px)  {
+@media screen and (max-width:420px)  {
     .hero_container{
         display: flex;
         flex-direction: column;
@@ -287,11 +287,11 @@ header, section{
         justify-content: space-between;
         align-items: center;
         margin: 0;
-        margin-top: 20%;
+        margin-top: 15%;
     }
     section{
         width: 90vw;
-        padding-inline: 5vw;
+        padding-inline: 5%;
     }
 
     .hero_left h1{
@@ -326,9 +326,9 @@ header, section{
         margin: 0%;
     }
     .package_header.pkg_head_mob{
-        width: 90%;
+        width: 100%;
         margin: 0;
-        margin-top: 45%;
+        padding-top: 55%;
     }
 
     .package_body.pkg_body_mob{
@@ -461,7 +461,8 @@ header, section{
 .package_header p{
     font-size: 1rem;
     color: var(--remedy_dark_gray);
-    margin-top: 1rem;
+    margin-block: 1rem;
+    text-align: center;
 }
 .box_title{
     font-size: 1.5rem;
