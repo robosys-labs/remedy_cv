@@ -31,8 +31,6 @@ const validateForm = () => {
     var x, y, i, valid = true;
     x = document.getElementsByClassName("tab");
     y = x[currentTab].getElementsByTagName("input");
-    console.log(y, "is here");
-    console.log(valid);
     // A loop that checks every input field in the current tab:
     for (i = 0; i < y.length; i++) {
       // If a field is empty...
@@ -54,14 +52,12 @@ const validateForm = () => {
 };
 
 function nextPrev(n) {
-  console.log("initial n ", n);
   // Exit the function if any field in the current tab is invalid:
   if (n == 1 && !validateForm()) return false;
   // Hide the current tab:
   allTabs[currentTab].style.display = "none";
   // Increase or decrease the current tab by 1:
   currentTab = currentTab + n;
-  console.log("added n ", n);
   // if you have reached the end of the form...
   if (currentTab >= allTabs.length) {
     // ... the form gets submitted:
@@ -85,7 +81,6 @@ function fixStepIndicator(n) {
 
 // Nav bar script
 function toggleMenu() {
-  console.log(document.getElementById("mob_menu").style.transform);
   if (
     document.getElementById("mob_menu").style.transform != "translateX(0vw)"
   ) {
@@ -155,7 +150,6 @@ function createWorks() {
   document.getElementById("work_here_status").value = " ";
 
   document.getElementById("form_2_add_detail").style.display = "block";
-  console.log(workArray);
 }
 
 //form 3/// FOR JOB DESCRIPTION///////////////////////////
@@ -179,7 +173,6 @@ function createJobDescr() {
     document.getElementById("job_desc_div_container").style.display = "block";
   });
 
-  console.log(jobArray);
 }
 
 // form 4 /////////// FOR EDUCATION/////////////////////////
@@ -241,7 +234,6 @@ function createSchoolData() {
     document.getElementById("form_4_add_details").style.display = "block";
   });
 
-  console.log(schoolArray);
 }
 
 // form 5 /////////// FOR skill/////////////////////////
@@ -249,17 +241,12 @@ function createSchoolData() {
 var skill_lists = document.getElementById("skill_list_id");
 const skill = document.createElement("ul");
 skill.id = "skillUlId";
-// skill_lists.append(skill);
-
-console.log(skill.id);
-
 function createSkillsData() {
   skillArray.push({ skill: document.getElementById("skills_cert_id").value });
   const skillLi = document.createElement("li");
   skillLi.className = "skill_list";
   skillLi.id = "skillId" + Math.floor(Math.random() * 100);
   skillLi.onclick = function (e) {
-    console.log(this.id);
     document.getElementById(this.id).remove();
   };
   skillArray.map((item, index) => {
@@ -275,5 +262,4 @@ function createSkillsData() {
 
   document.getElementById("skills_cert_div_container").style.display = "block";
 
-  console.log(skillArray);
 }
