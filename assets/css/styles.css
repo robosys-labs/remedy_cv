@@ -244,7 +244,6 @@ header, section{
 }
 
 .hero_right{
- 
     display: flex;
     justify-content: flex-end;
 }
@@ -293,15 +292,26 @@ header, section{
         width: 90vw;
         padding-inline: 5%;
     }
-
+    .hero_left {
+        width: 100vw;
+        text-align: center;
+        margin-left: -5vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
     .hero_left h1{
         font-weight: 800;
-        width: 90vw;
+        width: 90%;
+        padding-left: 5%;
         display: flex;
         flex-wrap: wrap;
         font-size: 2rem;
         margin-bottom: .8rem;
         text-align: center;
+    }
+    .hero_left h1 span {
+        margin-right: 7px;
     }
     .hero_desc{
         text-align: center;
@@ -309,7 +319,7 @@ header, section{
     }
 
     .hero_btn{
-        margin-left: 21%;
+        width: 50%;
     }
 
     .hero_img_container{
@@ -328,7 +338,7 @@ header, section{
     .package_header.pkg_head_mob{
         width: 100%;
         margin: 0;
-        padding-top: 55%;
+        padding-top: 60%;
     }
 
     .package_body.pkg_body_mob{
