@@ -95,6 +95,7 @@ header, section{
 .header_section{
     width: 100vw;
     background-color: #fff;
+    margin-top: 3vh;
 }
 .header{
     height: 18%;
@@ -223,7 +224,7 @@ header, section{
 /* hero section styles start  here  */
 .hero_section{
     width: 100%;
-    height: 80vh;
+    height: 63vh;
     
 }
 
@@ -231,10 +232,11 @@ header, section{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 7vh;
 }
 
 .hero_img_container{
-    width: 60%;
+    width: 70%;
 }
 
 .hero_img_container img{

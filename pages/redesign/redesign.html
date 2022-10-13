@@ -10,6 +10,7 @@
       src="https://kit.fontawesome.com/d5317be683.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   </head>
   <body>
     <div class="header_section">
@@ -24,7 +25,7 @@
               />
             </a>
           </div>
-          <nav class="nav_menu" >
+          <nav class="nav_menu">
             <ul class="nav_links">
               <li class="nav_list_item">
                 <a href="/">Home</a>
@@ -90,122 +91,142 @@
             Fill the forms with your details to get started.
           </p>
         </div>
-      <form id="mother_form_container">
-      
-       
+        <form id="mother_form_container">
+          <!-- form redesign body -->
 
+          <div class="form_redesign_body tab" id="form_2_body_id">
+            <div class="form_progression">
+              <h4>CV Upgrade & Redesign</h4>
+              <!-- <div class="form_2_line"></div> -->
+              <!-- <div class="page_number">2/6</div> -->
+            </div>
+            <div class="form_redesign_input_container">
+              <div class="full_name_container">
+                <label for="full_name_id_redesign">Full name</label>
+                <input
+                  oninput="this.className = 'form_redesign_long_inputs'"
+                  class="form_redesign_long_inputs"
+                  type="text"
+                  placeholder="Enter full name (e.g John Doe)"
+                  id="full_name_id"
+                />
+              </div>
+              <div class="email_container">
+                <label for="email_id_pay">Enter email</label>
+                <input
+                  oninput="this.className = 'form_redesign_long_inputs'"
+                  class="form_redesign_long_inputs"
+                  type="text"
+                  placeholder="Enter email"
+                  id="email_id_pay"
+                />
+              </div>
+              <div class="phone_number_container">
+                <label for="phoneNumId">Phone</label>
+                <input
+                  oninput="this.className = 'form_redesign_long_inputs'"
+                  class="form_redesign_long_inputs"
+                  type="text"
+                  placeholder="Enter phone no."
+                  id="phoneNumId"
+                />
+              </div>
 
-    <!-- form redesign body -->
+              <div class="number_pages_container">
+                <label for="number_pages_id_redesign"
+                  >Enter the number of pages you want</label
+                >
+                <input
+                  oninput="this.className = 'form_redesign_long_inputs'"
+                  class="form_redesign_long_inputs"
+                  type="text"
+                  placeholder="Enter the number of pages you want"
+                  id="number_pages"
+                />
+              </div>
+              <div class="package_container">
+                <label for="cv_package_id">Your package</label>
+                <select
+                  name=""
+                  id="cv_package_id"
+                  class="form_redesign_long_inputs"
+                >
+                  <option value="null">select your package</option>
+                  <option value="3000">Basic <span> 3000 Naira</span></option>
+                  <option value="7500">
+                    Standard <span> 7500 Naira</span>
+                  </option>
+                  <option value="12000">
+                    Premium <span> 12000 Naira</span>
+                  </option>
+                </select>
+              </div>
+              <div class="upload_method_container">
+                <h6>Choose Upload Method</h6>
+                <div class="device_options">
+                  <div class="from_device">
+                    <input
+                      onchange="showUpload(1)"
+                      id="device_input_id"
+                      name="radio_upload"
+                      type="radio"
+                      value="uploadHere"
+                    />
+                    <p>From device</p>
+                  </div>
 
-    <div class="form_redesign_body  tab" id="form_2_body_id">
-        <div class="form_progression">
-     
-          <h4>CV Upgrade & Redesign</h4>
-          <!-- <div class="form_2_line"></div> -->
-          <!-- <div class="page_number">2/6</div> -->
-        </div>
-        <div class="form_redesign_input_container ">
-          <div class="full_name_container">
-            <label for="full_name_id_redesign">Full name</label>
-            <input oninput="this.className = 'form_redesign_long_inputs'"
-            class="form_redesign_long_inputs"
-              type="text"
-              placeholder="Enter full name (e.g John Doe)"
-              id="full_name_id_redesign"
-            />
-          </div>
-          <div class="email_container">
-            <label for="email_id_pay">Enter email</label>
-            <input oninput="this.className = 'form_redesign_long_inputs'" class="form_redesign_long_inputs" type="text" placeholder="Enter email" id="email_id_pay" />
-          </div>
-          <div class="phone_number_container">
-            <label for="phone_number_id_redesign">Phone</label>
-            <input oninput="this.className = 'form_redesign_long_inputs'" class="form_redesign_long_inputs" type="text" placeholder="Enter phone no." id="phone_number_id_redesign" />
-          </div>
-
-          <div class="number_pages_container">
-            <label for="number_pages_id_redesign">Enter the number of pages you want</label>
-            <input oninput="this.className = 'form_redesign_long_inputs'" class="form_redesign_long_inputs"type="text" placeholder="Enter the number of pages you want" id="number_pages__id_redesign" />
-          </div>
-          <div class="package_container">
-            <label for="cv_package_id">Your package</label>
-            <select name="" id="cv_package_id" class="form_redesign_long_inputs">
-                <option value="null">select your package</option>
-                <option value="3000">Basic <span> 3000 Naira</span></option>
-                <option value="7500">Standard <span> 7500 Naira</span></option>
-                <option value="12000">Premium <span> 12000 Naira</span></option>
-            </select>
-          </div>
-          <div class="upload_method_container">
-            <h6>
-              Choose Upload Method
-            </h6>
-            <div class="device_options">
-                <div class="from_device">
-                    <input onchange="showUpload(1)" id="device_input_id" name="radio_upload" type="radio" value="uploadHere"/> <p>From device</p>
+                  <div class="via_mail">
+                    <input
+                      id="email_input_id"
+                      name="radio_upload"
+                      type="radio"
+                      value="email"
+                      onchange="showUpload(2)"
+                    />
+                    <p>Send via mail</p>
+                  </div>
                 </div>
 
-                <div class="via_mail">
-                    <input id="email_input_id" name="radio_upload" type="radio" value="email" onchange="showUpload(2)"/> <p>Send via mail</p>
+                <div id="upload_area_id" class="upload_area">
+                  <input
+                    type="file"
+                    class="choose_file"
+                    id="choose_file_upload"
+                    accept="image/png, image/jpg, image/gif, image/jpeg, image/pdf"
+                  />
                 </div>
-            </div>
 
-            <div id="upload_area_id" class="upload_area">
-              <input type="file" class="choose_file" id="choose_file_upload" accept="image/png, image/jpg, image/gif, image/jpeg, image/pdf">
-            </div>
-
-            <div class="send_via_email_container" id="send_via_email_id">
-              <div class="send_via_email">
-                <p>Please  send your CV to cv@remedyportal.com 
-                  after payment in the next step</p>
-                  <p class="sec_child">
-                    Kindly note that Revamped CV will be sent 
-to the Email provided within 48hrs
-                  </p>
+                <div class="send_via_email_container" id="send_via_email_id">
+                  <div class="send_via_email">
+                    <p>
+                      Please send your CV to cv@remedyportal.com after payment
+                      in the next step
+                    </p>
+                    <p class="sec_child">
+                      Kindly note that Revamped CV will be sent to the Email
+                      provided within 48hrs
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-    
-        </div>
-       
-      </div>
 
-           <div class="next_btn_container">
-            <button type="button"  class="remedy_btn form1_submit_btn" id="next_btn" onclick="payParam()"
-              >Proceed to payment <span><i class="fa-solid fa-arrow-right"></i></span
-            ></button>
+          <div class="next_btn_container">
+            <button
+              type="button"
+              class="remedy_btn form1_submit_btn"
+              id="next_btn"
+              onclick="payParam()"
+            >
+              Proceed to payment
+              <span><i class="fa-solid fa-arrow-right"></i></span>
+            </button>
           </div>
-
         </form>
-
       </section>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
     <!-- Beginning of FOOTER section -->
     <div class="footer_section">
       <footer class="footer_section_container" id="remedy_footer">
@@ -252,8 +273,8 @@ to the Email provided within 48hrs
         </div>
       </footer>
     </div>
-    <script src="https://js.paystack.co/v1/inline.js"></script> 
-    <script src="../../js/redesign_CV.js"></script>
-    <script src="../../js/paymentGateway.js"></script>
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+    <script src="../../js/redesignCv.js"></script>
+    <script src="../../js/redesignSubmit.js"></script>
   </body>
 </html>
