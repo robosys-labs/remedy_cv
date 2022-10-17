@@ -268,7 +268,7 @@
                 </div>
               </div>
 
-              <div class="work_status_add_experience_container">
+              <div class="work_status_add_experience_container" id="work_xperience_status_id">
                 <div class="school_status">
                   <input
                     oninput="this.className = ''"
@@ -289,6 +289,7 @@
                   <p>Add another Experience</p>
                 </button>
               </div>
+              <button id="workSaveBtn" onclick='saveWorkEdit()' class="remedy_btn hide_work_btn" type="button">Save edit</button>
             </div>
           </div>
 
@@ -314,11 +315,13 @@
               </div>
               <div class="added_details_bottom">
                 <button
+                  type="button"
                   id="added_details_form_3_click"
                   class="added_details_edit_btn_form_3"
-                >
+                  onclick="editDesc()">
                   Edit <i class="fa-solid fa-pen-to-square"></i>
                 </button>
+                
               </div>
             </div>
 
@@ -442,7 +445,7 @@
                 </div>
               </div>
 
-              <div class="school_status_add_experience_container">
+              <div id="schoolStatusExpId" class="school_status_add_experience_container">
                 <div class="school_status">
                   <input
                     oninput="this.className = ''"
@@ -464,6 +467,7 @@
                   </button>
                 </div>
               </div>
+              <button id="schoolSaveBtn" class="remedy_btn" onclick="schoolEditSave()" type="button">Save edit</button>
             </div>
           </div>
 

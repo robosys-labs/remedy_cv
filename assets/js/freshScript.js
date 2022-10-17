@@ -1,3 +1,4 @@
+
 const allTabs = document.getElementsByClassName("tab");
 const previousBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("next_btn");
@@ -51,7 +52,7 @@ const validateForm = () => {
   return valid; // return the valid status
 };
 
-function nextPrev(n) {
+function nextPrev(n) {s
   // Exit the function if any field in the current tab is invalid:
   if (n == 1 && !validateForm()) return false;
   // Hide the current tab:
@@ -121,18 +122,20 @@ function createWorks() {
       <div class="added_details_left">
         <h4>Work History ${index + 1}</h4>
         <div class="added_details_desc">
-          <p><span>Job Title:</span> ${item.job_title}</p>
-          <p><span>Employer:</span>  ${item.employer}</p>
-          <p><span>City:</span> ${item.city} </p>
-          <p><span>Country:</span> ${item.country}</p>
-          <p> <span>Start Date/End Date: </span> ${item.start_date}/${
-      item.end_date
-    } </p>
+          <p><span>Job Title:</span> <span id='titleId${index}'>${item.job_title}</span></p>
+          <p><span>Employer:</span> <span id='employerId${index}'>${item.employer}</span> </p>
+          <p ><span>City:</span> <span id='cityId${index}'>${item.city} </span></p>
+          <p ><span>Country:</span><span id='countryId${index}'> ${item.country}</span></p>
+          <p> <span>Start Date/End Date: </span> <span id='startDateId${index}'> ${item.start_date}</span><span id='endDateId${index}'>${
+            item.end_date
+          }</span> </p>
           
         </div>
       </div>
       <div class="added_details_right">
-        <button  id='added_details_form_2_click' class="added_details_edit_btn_form_2">Edit <i class="fa-solid fa-pen-to-square"></i></button>
+        <button 
+        type="button" id='editBtn${index}' class="added_details_edit_btn_form_2"
+        onclick="editWork(this.id)">Edit <i class="fa-solid fa-pen-to-square"></i></button>
       </div>
     </div>
     `;
@@ -152,6 +155,49 @@ function createWorks() {
   document.getElementById("form_2_add_detail").style.display = "block";
 }
 
+
+
+
+function editWork (clicked_id){
+  document.getElementById('next_btn').classList.add('hide_work_btn')
+  document.getElementById('work_xperience_status_id').classList.add('hide_work_btn')
+  document.getElementById('workSaveBtn').style.display = "block"
+
+let splitBtnInd= clicked_id.match(/\d+/g)
+for (let i = 0; i < workArray.length; i++) {
+  // const element = workArray[i];
+  if (i == splitBtnInd[0]) {
+
+document.getElementById('job_title_id').value =  document.getElementById(`titleId${splitBtnInd[0]}`).innerHTML
+document.getElementById('employer_id').value =  document.getElementById(`employerId${splitBtnInd[0]}`).innerHTML
+document.getElementById('city_id_form_2').value =  document.getElementById(`cityId${splitBtnInd[0]}`).innerHTML
+document.getElementById('country_id_form_2').value =  document.getElementById(`countryId${splitBtnInd[0]}`).innerHTML
+document.getElementById('start_date_id').value = document.getElementById(`startDateId${splitBtnInd[0]}`).innerHTML
+document.getElementById('end_date_id').value = document.getElementById(`endDateId${splitBtnInd[0]}`).innerHTML
+// document.getElementById('').value =  document.getElementById(`work_here_status${splitBtnInd[0]}`).innerHTML 
+
+
+if (splitBtnInd[0] > -1) { // only splice array when item is found
+  workArray.splice(splitBtnInd[0], 1);// 2nd parameter means remove one item only
+  console.log( workArray.splice(splitBtnInd[0], 1));
+}
+
+}
+}
+}
+
+
+
+function saveWorkEdit(){
+  document.getElementById('workSaveBtn').style.display= "none"
+  document.getElementById('next_btn').style.display= "block"
+  document.getElementById('work_xperience_status_id').style.display= "flex"
+  console.log(workArray)
+  createWorks()
+}
+
+
+
 //form 3/// FOR JOB DESCRIPTION///////////////////////////
 const jobDescContainer = document.getElementById("job_desc_div");
 
@@ -166,12 +212,30 @@ function createJobDescr() {
   jobArray.map((item) => {
     const node = document.createElement("p");
     node.className = "job_para";
+
     const textnode = item.description;
     node.innerHTML = textnode;
     document.getElementById("job_desc_div").append(node);
     document.getElementById("job_description_input_id").value = " ";
     document.getElementById("job_desc_div_container").style.display = "block";
   });
+
+}
+
+function editDesc(){
+  // set the container to none
+  const elements = document.getElementsByClassName("job_para");
+  while (elements.length > 0) {
+    elements[0].parentNode.removeChild(elements[0]);
+  }
+  const descriptions = jobArray.map((x) => x.description);
+  const lastDesc = descriptions.pop();
+    
+  // Create result 
+  result = descriptions.join(' ') +" "+ lastDesc;
+  console.log(result);
+   document.getElementById("job_description_input_id").value= result
+   jobArray=[]
 
 }
 
@@ -201,19 +265,21 @@ function createSchoolData() {
         <div class="added_details_left">
           <h4>Education ${index + 1} </h4>
           <div class="added_details_desc">
-            <p><span>School name:</span> ${item.school_name}</p>
-            <p><span>Field of study:</span>  ${item.field_study}</p>
-            <p><span>Degree:</span> ${item.degree} </p>
-            <p><span>City:</span> ${item.city}</p>
-            <p><span>Country:</span> ${item.country}</p>
-            <p> <span>Start Date/End Date: </span> ${item.start_date}/${
-      item.end_date
-    }</p>
+            <p><span>School name:</span> <span id='schoolNameId${index}'>${item.school_name}</span> </p>
+            <p><span>Field of study:</span> <span id='fieldNameId${index}'>${item.field_study}</span> </p>
+            <p><span>Degree:</span> <span id='degreeId${index}'>${item.degree}</span> </p>
+            <p><span>City:</span> <span id='cityNameId${index}' >${item.city}</span></p>
+            <p><span>Country:</span> <span id='countryNameId${index}'> ${item.country}</span></p>
+            <p>
+             <span>Start Date/End Date: </span> 
+             <span id='schoolStartDate${index}'>${item.start_date}</span>
+             / <span id='schoolEndDate${index}'>${item.end_date }</span>
+              </p>
             
           </div>
         </div>
         <div class="added_details_right">
-          <button  id='added_details_form_4_click' class="added_details_edit_btn_form_2">Edit <i class="fa-solid fa-pen-to-square"></i></button>
+          <button type='button' onClick='editEducation(this.id)'  id='added_details_form_4_click${index}' class="added_details_edit_btn_form_2">Edit <i class="fa-solid fa-pen-to-square"></i></button>
         </div>
       </div>
       `;
@@ -236,11 +302,58 @@ function createSchoolData() {
 
 }
 
+
+function editEducation (eduClickedId) {
+
+
+  console.log(eduClickedId)
+
+  document.getElementById('schoolSaveBtn').style.display= "block";
+  document.getElementById('next_btn').style.display= "none";
+//match numbers in the id, make an array of them and assign to variable
+    let eduEditBtnInd= eduClickedId.match(/\d+/g);
+    console.log(eduEditBtnInd);
+    document.getElementById(`schoolStartDate${eduEditBtnInd[1]}`).innerHTML
+for (let i = 0; i < schoolArray.length; i++) {
+  
+  if (i == eduEditBtnInd[1]) {
+
+document.getElementById('school_name_id').value =  document.getElementById(`schoolNameId${eduEditBtnInd[1]}`).innerHTML
+document.getElementById('degree_type_id').value =  document.getElementById(`fieldNameId${eduEditBtnInd[1]}`).innerHTML
+document.getElementById('city_id_form_4').value =  document.getElementById(`cityNameId${eduEditBtnInd[1]}`).innerHTML
+document.getElementById('country_id_form_4').value =  document.getElementById(`countryNameId${eduEditBtnInd[1]}`).innerHTML
+document.getElementById('start_date_form_4_id').value = document.getElementById(`schoolStartDate${eduEditBtnInd[1]}`).innerHTML
+document.getElementById('end_date_form_4_id').value = document.getElementById(`schoolEndDate${eduEditBtnInd[1]}`).innerHTML
+
+
+}
+
+}
+if (eduEditBtnInd[1] > -1) { // only splice array when item is found
+  schoolArray.splice(eduEditBtnInd[1], 1);// 2nd parameter means remove one item only
+}
+}
+
+
+
+function schoolEditSave(){
+  document.getElementById('schoolSaveBtn').style.display= "none"
+  document.getElementById('next_btn').style.display= "block"
+  document.getElementById('schoolStatusExpId').style.display= "flex"
+  createSchoolData()
+  console.log();
+}
+
+
+
+
 // form 5 /////////// FOR skill/////////////////////////
 
 var skill_lists = document.getElementById("skill_list_id");
 const skill = document.createElement("ul");
 skill.id = "skillUlId";
+
+
 function createSkillsData() {
   skillArray.push({ skill: document.getElementById("skills_cert_id").value });
   const skillLi = document.createElement("li");
@@ -249,6 +362,8 @@ function createSkillsData() {
   skillLi.onclick = function (e) {
     document.getElementById(this.id).remove();
   };
+
+
   skillArray.map((item, index) => {
     const newSkill = `
       <p>${item.skill.substring(0, 20)}</p>

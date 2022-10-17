@@ -638,6 +638,13 @@ form .prev_btn:hover {
   }
 }
 
+
+
+.hide_work_btn{
+  display: none;
+}
+
+
 /* form 3 body styles start here || Job description */
 
 .form_3_body {
@@ -749,6 +756,10 @@ form .prev_btn:hover {
   color: var(--remedy_light_blue);
   cursor: pointer;
   transform: scale(1.1);
+}
+
+#added_details_save{
+  /* display: none; */
 }
 
 @media screen and (max-width: 420px) {
@@ -884,6 +895,10 @@ form .prev_btn:hover {
 
 .add_experience span:hover {
   color: #542ce0;
+}
+
+#schoolSaveBtn{
+  display: none;
 }
 
 @media screen and (max-width: 420px) {
