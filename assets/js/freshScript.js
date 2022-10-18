@@ -45,6 +45,9 @@ const validateForm = () => {
 
       }
     }
+    if((schoolArray.length || skillArray.length || workArray.length || jobArray.length) > 0){
+      return valid = true;
+    }
     // If the valid status is true, mark the step as finished and valid:
   //   if (valid) {
   //     document.getElementsByClassName("step")[currentTab].className += " finish";
@@ -55,6 +58,7 @@ const validateForm = () => {
 function nextPrev(n) {
   // Exit the function if any field in the current tab is invalid:
   if (n == 1 && !validateForm()) return false;
+
   // Hide the current tab:
   allTabs[currentTab].style.display = "none";
   // Increase or decrease the current tab by 1:
@@ -64,6 +68,18 @@ function nextPrev(n) {
     // ... the form gets submitted:
     mother_form.submit();
     return false;
+  }
+  if(currentTab == 2) {
+    createWorks()
+  }
+  if(currentTab == 3){
+    createJobDescr()
+  }
+  if(currentTab == 4){
+    createSchoolData()
+  }
+  if(currentTab == 5){
+    createSkillsData()
   }
   // Otherwise, display the correct tab:
   showTab(currentTab);
