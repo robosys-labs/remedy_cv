@@ -248,7 +248,7 @@ function editDesc(){
   const lastDesc = descriptions.pop();
     
   // Create result 
-  result = descriptions.join(' ') +" "+ lastDesc;
+  let result = descriptions.join(' ') +" "+ lastDesc;
   console.log(result);
    document.getElementById("job_description_input_id").value= result
    jobArray=[]
