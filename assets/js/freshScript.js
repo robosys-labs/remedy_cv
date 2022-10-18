@@ -52,7 +52,7 @@ const validateForm = () => {
   return valid; // return the valid status
 };
 
-function nextPrev(n) {s
+function nextPrev(n) {
   // Exit the function if any field in the current tab is invalid:
   if (n == 1 && !validateForm()) return false;
   // Hide the current tab:
