@@ -21,6 +21,7 @@
 html{
     overflow-x: hidden;
     width: 100vw;
+    scroll-behavior: smooth;
 }
 
 body{
@@ -96,16 +97,21 @@ header, section{
     width: 100vw;
     background-color: #fff;
     margin-top: 3vh;
+    position: fixed;
 }
-.header{
-    height: 18%;
-   
-}
+
 .nav_bar{
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2% 0;
+    width: 100vw;
+    height: 12vh;
+    /* margin-left: 5vw; */
+    overflow: hidden;
+    top: 0;
+    background-color: #fff;
 }
 
 .nav_links{
@@ -135,6 +141,7 @@ header, section{
 
 .brand_logo{
     max-width: 12rem;
+    margin-left: 2vw;
 }
 .remedy_logo{
     width: 100%;
@@ -143,6 +150,9 @@ header, section{
 
 .mobile_menu .nav_links , .mobile_menu .nav_button_container , .close_mobile_nav, .hamburger{
     display: none;
+    position: fixed;
+    left: 85vw;
+    font-size: 1.6rem;
 }
 
 
@@ -159,6 +169,13 @@ header, section{
 
     .mobile_menu .nav_links , .mobile_menu .nav_button_container , .close_mobile_nav, .hamburger{
         display: block;
+        position: relative;
+        left: 0;
+        font-size: 1.8rem;
+    }
+    .hamburger{
+        position: fixed;
+        left: 83vw;
     }
     
     
@@ -225,7 +242,7 @@ header, section{
 .hero_section{
     width: 100%;
     height: 63vh;
-    
+    margin-top: 20vh;
 }
 
 .hero_container{
@@ -265,7 +282,10 @@ header, section{
     font-size: 1rem;
     margin-bottom: .8rem;
     color: var(--remedy_light_gray);
-    
+}
+.hero_desc span{
+    color: var(--remedy_pink);
+    font-weight: 600;
 }
 
 .hero_btn{
@@ -744,10 +764,11 @@ header, section{
     width: 50%;
 }
 
-.name_email input{
+.name_email input {
     border: 0;
     border-bottom: 1px solid #BCBCBC;
     padding: 1rem 0;
+    padding-inline: 5px;
     width: 90%;
 }
 
@@ -760,8 +781,9 @@ header, section{
 #contact_message{
     border: 0;
     border-bottom: 1px solid #BCBCBC;
-    padding: 1rem 0;
-    
+    padding-top: 1rem;
+    padding-bottom: 0;
+    padding-inline: 5px;
     width: 100%;
 }
 .contact_form{
@@ -769,13 +791,35 @@ header, section{
     flex-direction: column;
     gap: 2rem;
 }
-
+.contact_form_left .drop_message {
+    width: 90%;
+}
+.contact_other_socials a {
+    margin-right: 3vw;
+}
 .form_submit_btn{
     width: 30%;
 }
+input{
+    margin-bottom: 5px;
+}
+.contact_form label{
+    margin-top: 7px;
+}
+.contact_form input{
+    width: 90%;
+    padding-bottom: 0.3rem;
+}
+.contact_form textarea{
+    padding-bottom: 0.3rem;
 
-
-
+}
+input:focus{
+    outline:0px;
+}
+textarea:focus{
+    outline:0px;
+}
 
 
 
@@ -963,4 +1007,37 @@ footer h6{
     width: 100%;
     position: fixed;
     z-index: 1;
+}
+
+@media screen  and (max-width:420px) {
+    .contact_us_form{
+        padding-inline: 4%;
+        padding-right: 0;
+        padding-left: 6%;
+    }
+    .sub_input_container{
+        margin-top: 1rem;
+        background-color: #e7e7e8;
+        border: 0;
+        border-radius: 2rem;
+        height: 9vh;
+        display: flex;
+        justify-content: space-between;
+    }
+    .sub_input{
+        width: 70%;
+        height: 100%;
+    }
+    .subscribe_submit_btn{
+        width: 26%;
+        height: 100%;
+    }
+    .name_email{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .name_container,.email_container{
+        width: 100%
+    }
 }

@@ -92,10 +92,17 @@ section {
   height: 18%;
 }
 .nav_bar {
+  position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2% 0;
+  padding: 2%;
+  width: 100vw;
+  height: 12vh;
+  /* margin-left: 5vw; */
+  overflow: hidden;
+  top: 0;
+  background-color: #fff;
 }
 
 .nav_links {
@@ -123,6 +130,7 @@ section {
 
 .brand_logo {
   max-width: 12rem;
+  margin-left: 2vw;
 }
 .remedy_logo {
   width: 100%;
@@ -173,6 +181,7 @@ form .prev_btn:hover {
   width: 100%;
   background-color: #f5f6fa;
   padding: 4rem 0;
+  margin-top: 10vh;
 }
 
 .form_container {
@@ -525,12 +534,16 @@ form .prev_btn:hover {
     display: none;
   }
 
-  .mobile_menu .nav_links,
-  .mobile_menu .nav_button_container,
-  .close_mobile_nav,
-  .hamburger {
+  .mobile_menu .nav_links , .mobile_menu .nav_button_container , .close_mobile_nav, .hamburger{
     display: block;
-  }
+    position: relative;
+    left: 0;
+    font-size: 1.8rem;
+}
+.hamburger{
+    position: fixed;
+    left: 83vw;
+}
 
   .mobile_menu {
     width: 80vw;
@@ -625,6 +638,7 @@ footer h6 {
   border-radius: 2rem;
   padding: 0.5rem;
   width: 76%;
+  padding-inline: 3px;
 }
 
 .sub_input:focus {
@@ -665,6 +679,7 @@ footer h6 {
   background-color: #e7e7e8;
   border: 0;
   border-radius: 2rem;
+  
 }
 
 @media screen and (max-width: 420px) {
@@ -685,5 +700,24 @@ footer h6 {
 
   .modal_1.overwrite_modal {
     width: 80%;
+  }
+}
+@media screen  and (max-width:420px) {
+  .sub_input_container{
+      margin-top: 1rem;
+      background-color: #e7e7e8;
+      border: 0;
+      border-radius: 2rem;
+      height: 9vh;
+      display: flex;
+      justify-content: space-between;
+  }
+  .sub_input{
+      width: 70%;
+      height: 100%;
+  }
+  .subscribe_submit_btn{
+      width: 26%;
+      height: 100%;
   }
 }
