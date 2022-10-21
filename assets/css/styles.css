@@ -213,6 +213,7 @@ header, section{
         display: block;
         padding-inline-start: 10%;
         margin-top: 2rem;
+        padding-block: 6vh;
     }
 
     .close_mobile_nav{
@@ -271,7 +272,7 @@ header, section{
     color: var(--remedy_dark_blue);
     line-height: 1.2;
     margin-bottom: .8rem;
-
+    width: 40vw;
 }
 
 .hero_left h1 span{
@@ -282,10 +283,6 @@ header, section{
     font-size: 1rem;
     margin-bottom: .8rem;
     color: var(--remedy_light_gray);
-}
-.hero_desc span{
-    color: var(--remedy_pink);
-    font-weight: 600;
 }
 
 .hero_btn{
@@ -347,8 +344,9 @@ header, section{
     }
     .hero_right{
         display: block;
-    
-    margin-top: 8%;
+        margin-top: 8%;
+        width: 100vw;
+        margin-left: -5vw;
     }
     .package_container.pkg_cont_mob{
         width: 100%;
@@ -434,7 +432,7 @@ header, section{
 
 .package_section{
     width: 100%;
-    
+    margin-top: 10vh; 
 }
 
 .package_body{
@@ -919,8 +917,8 @@ footer h6{
     background-color: #e7e7e8;
     border: 0;
     border-radius: 2rem;
-    
-    
+    display: flex;
+    justify-content: space-between;  
 }
 
 
@@ -1021,16 +1019,15 @@ footer h6{
         border: 0;
         border-radius: 2rem;
         height: 9vh;
-        display: flex;
-        justify-content: space-between;
     }
     .sub_input{
         width: 70%;
         height: 100%;
     }
     .subscribe_submit_btn{
-        width: 26%;
+        width: 23%;
         height: 100%;
+        font-size: 1.5rem;
     }
     .name_email{
         display: flex;
