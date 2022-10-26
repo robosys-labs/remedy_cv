@@ -128,9 +128,13 @@ section {
   border-bottom: 2px solid var(--remedy_pink);
 }
 
-.brand_logo {
+.brand_logo{
   max-width: 12rem;
-  margin-left: 2vw;
+  margin-left: 9vw;
+}
+
+.nav_button_container {
+  margin-left: -7vw;
 }
 .remedy_logo {
   width: 100%;

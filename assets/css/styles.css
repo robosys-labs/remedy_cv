@@ -141,8 +141,9 @@ header, section{
 
 .brand_logo{
     max-width: 12rem;
-    margin-left: 2vw;
+    margin-left: 9vw;
 }
+
 .remedy_logo{
     width: 100%;
 }
@@ -154,9 +155,9 @@ header, section{
     left: 85vw;
     font-size: 1.6rem;
 }
-
-
-
+.nav_button_container {
+    margin-left: -7vw;
+}
 
 @media screen and (max-width:420px) {
     .nav_links{
@@ -819,6 +820,13 @@ textarea:focus{
     outline:0px;
 }
 
+.social_icons{
+    border: 2px solid var(--remedy_pink);
+    border-radius: 50%;
+    padding: .2rem;
+    width: 1rem;
+    height: 1rem;
+}
 
 
 
