@@ -82,7 +82,21 @@ section {
   background-color: #f5e4e4;
   color: #fff;
 }
+.form_redesign_long_inputs {
+  width: 100%;
+  border-radius: 0.3rem;
+  padding: 0.5rem 1rem;
+  outline: none;
+  border: 0;
+  background-color: var(--remedy_label_background_gray);
+  margin-top: 0.5rem;
+}
 
+.form_redesin_input_container label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--remedy_dark_gray);
+}
 /* navbar styles start here  */
 .header_section {
   width: 100vw;
@@ -129,11 +143,11 @@ section {
   border-bottom: 2px solid #542ce0;
 }
 
-.brand_logo{
+.brand_logo {
   max-width: 12rem;
   margin-left: 9vw;
 }
-.remedy_logo{
+.remedy_logo {
   width: 100%;
 }
 .nav_button_container {
@@ -159,16 +173,19 @@ section {
     display: none;
   }
 
-  .mobile_menu .nav_links , .mobile_menu .nav_button_container , .close_mobile_nav, .hamburger{
+  .mobile_menu .nav_links,
+  .mobile_menu .nav_button_container,
+  .close_mobile_nav,
+  .hamburger {
     display: block;
     position: relative;
     left: 0;
     font-size: 1.8rem;
-}
-.hamburger{
+  }
+  .hamburger {
     position: fixed;
     left: 83vw;
-}
+  }
   .mobile_menu {
     width: 80vw;
     height: 100vh;
@@ -657,12 +674,9 @@ form .prev_btn:hover {
   }
 }
 
-
-
-.hide_work_btn{
+.hide_work_btn {
   display: none;
 }
-
 
 /* form 3 body styles start here || Job description */
 
@@ -777,7 +791,7 @@ form .prev_btn:hover {
   transform: scale(1.1);
 }
 
-#added_details_save{
+#added_details_save {
   /* display: none; */
 }
 
@@ -916,7 +930,7 @@ form .prev_btn:hover {
   color: #542ce0;
 }
 
-#schoolSaveBtn{
+#schoolSaveBtn {
   display: none;
 }
 
@@ -1285,22 +1299,22 @@ footer h6 {
     margin-bottom: 1rem;
   }
 }
-@media screen  and (max-width:420px) {
-  .sub_input_container{
-      margin-top: 1rem;
-      background-color: #e7e7e8;
-      border: 0;
-      border-radius: 2rem;
-      height: 9vh;
-      display: flex;
-      justify-content: space-between;
+@media screen and (max-width: 420px) {
+  .sub_input_container {
+    margin-top: 1rem;
+    background-color: #e7e7e8;
+    border: 0;
+    border-radius: 2rem;
+    height: 9vh;
+    display: flex;
+    justify-content: space-between;
   }
-  .sub_input{
-      width: 70%;
-      height: 100%;
+  .sub_input {
+    width: 70%;
+    height: 100%;
   }
-  .subscribe_submit_btn{
-      width: 26%;
-      height: 100%;
+  .subscribe_submit_btn {
+    width: 26%;
+    height: 100%;
   }
 }

@@ -5,18 +5,17 @@ function payParam() {
     first_name: document.getElementById("first_name_id").value,
     last_name: document.getElementById("last_name_id").value,
     phone_number: document.getElementById("phone_number_id").value,
-    pages: 3,
-    package_id: document.getElementById("cv_package_id").value,
+    pages: parseInt(document.getElementById("number_pages").value),
+    package_id: parseInt(document.getElementById("cv_package_id").value),
     email: document.getElementById("email_id").value,
     cv_education: schoolArray,
     cv_work_history: workArray,
     cv_skill_certification: skillArray,
-    job_description: jobArray,
   };
 
   ////// initiate paystack payment window
   let handler = PaystackPop.setup({
-    key: "", // Replace with your public key
+    key: "pk_live_5f88577a67b8571a55efe2f3e62697cba524e03e", // Replace with your public key
     email: clientMail.value,
     amount: parseInt(packagePrice.value) * 100,
     ref: "rem" + Math.floor(Math.random() * 1000000000 + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
@@ -25,27 +24,26 @@ function payParam() {
       alert("Window closed.");
     },
     callback: function (response) {
-      if (response.status === 200) {
-        // submit form to backend  //
-        $.ajax({
-          type: "POST",
-          url: "https://staging.remedyportal.com/api/v1/cv",
-          data: formData,
-          success: function () {
-            // Success Page
-            redirect_url = "../pages/success/success.html";
-            location.href = redirect_url;
-            let message = "Payment complete! Reference: " + response.reference;
-          },
-          error: function (data) {
-            console.log(data);
-          },
-          dataType: "json",
-          contentType: "application/json",
-        });
-      } else {
-        console.log("There was a problem completing payment");
-      }
+      formData.code = response.reference;
+      console.log(formData);
+      // submit form to backend  //
+      $.ajax({
+        type: "POST",
+        url: "https://staging.remedyportal.com/api/v1/cv",
+        data: JSON.stringify(formData),
+        success: function () {
+          // Success Page
+          console.log("payment successful");
+          redirect_url = "https://cv.remedyportal.com/pages/success.html";
+          location.href = redirect_url;
+          // let message = "Payment complete! Reference: " + response.reference;
+        },
+        error: function (data) {
+          console.log(data);
+        },
+        dataType: "json",
+        contentType: "application/json",
+      });
     },
   });
   handler.openIframe();

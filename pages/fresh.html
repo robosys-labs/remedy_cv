@@ -13,68 +13,67 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   </head>
   <body>
-
-        <div class="nav_bar">
-          <div class="brand_logo">
-            <a href="/">
-              <img
-                class="remedy_logo"
-                alt="remedyportal logo"
-                src="../assets/img/remedy_logo.png"
-              />
-            </a>
-          </div>
-          <nav class="nav_menu">
-            <ul class="nav_links">
-              <li class="nav_list_item">
-                <a href="/">Home</a>
-              </li>
-              <li class="nav_list_item">
-                <a href="#packages">Packages</a>
-              </li>
-              <li class="nav_list_item">
-                <a href="#works">How it works</a>
-              </li>
-              <li class="nav_list_item">
-                <a href="#about">About</a>
-              </li>
-              <li class="nav_list_item">
-                <a href="#contact">Contact</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="nav_button_container">
-            <button class="remedy_btn get_started">Get started</button>
-          </div>
-          <div class="hamburger" onclick="toggleMenu()">
-            <i class="fa-solid fa-bars"></i>
-          </div>
-          <div class="mobile_menu" id="mob_menu">
-            <div class="close_mobile_nav">
-              <i class="fa-solid fa-xmark" onclick="toggleMenu()"></i>
-            </div>
-            <ul class="nav_links">
-              <li class="nav_list_item">
-                <a href="/">Home</a>
-              </li>
-              <li class="nav_list_item">
-                <a href="#packages">Packages</a>
-              </li>
-              <li class="nav_list_item">
-                <a href="#works">How it works</a>
-              </li>
-              <li class="nav_list_item">
-                <a href="#about">About</a>
-              </li>
-              <li class="nav_list_item">
-                <a href="#contact">Contact</a>
-              </li>
-            </ul>
-            <div class="nav_button_container">
-              <button class="remedy_btn get_started">Get started</button>
-            </div>
-          </div>
+    <div class="nav_bar">
+      <div class="brand_logo">
+        <a href="/">
+          <img
+            class="remedy_logo"
+            alt="remedyportal logo"
+            src="../assets/img/remedy_logo.png"
+          />
+        </a>
+      </div>
+      <nav class="nav_menu">
+        <ul class="nav_links">
+          <li class="nav_list_item">
+            <a href="/">Home</a>
+          </li>
+          <li class="nav_list_item">
+            <a href="#packages">Packages</a>
+          </li>
+          <li class="nav_list_item">
+            <a href="#works">How it works</a>
+          </li>
+          <li class="nav_list_item">
+            <a href="#about">About</a>
+          </li>
+          <li class="nav_list_item">
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="nav_button_container">
+        <button class="remedy_btn get_started">Get started</button>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <div class="mobile_menu" id="mob_menu">
+        <div class="close_mobile_nav">
+          <i class="fa-solid fa-xmark" onclick="toggleMenu()"></i>
         </div>
+        <ul class="nav_links">
+          <li class="nav_list_item">
+            <a href="/">Home</a>
+          </li>
+          <li class="nav_list_item">
+            <a href="#packages">Packages</a>
+          </li>
+          <li class="nav_list_item">
+            <a href="#works">How it works</a>
+          </li>
+          <li class="nav_list_item">
+            <a href="#about">About</a>
+          </li>
+          <li class="nav_list_item">
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+        <div class="nav_button_container">
+          <button class="remedy_btn get_started">Get started</button>
+        </div>
+      </div>
+    </div>
 
     <!-- Beginner of FORMs SECTION -->
 
@@ -88,220 +87,227 @@
             Fill the forms with your details to get started.
           </p>
         </div>
-        <form id="mother_form_container">
-          <span id="prevBtn" class="prev_btn"
-            ><i
-              class="fa-solid back_form fa-arrow-left"
-              onclick="nextPrev(-1)"
-            ></i
-          ></span>
-          <div id="form_1_body_id" class="form_1_body tab">
-            <div class="form_progression">
-              <h4>Personal info</h4>
-              <div class="line"></div>
-              <div class="page_number">1/6</div>
-            </div>
-            <div class="form_1_input_container">
-              <div class="first_last_name">
-                <div class="first_name">
-                  <label for="first_name_id">First Name</label>
-                  <input
-                    oninput="this.className = ''"
-                    placeholder="Enter Last Name"
-                    type="text"
-                    id="first_name_id"
-                  />
-                </div>
+        <!-- <form id="mother_form_container"> -->
+        <span id="prevBtn" class="prev_btn"
+          ><i
+            class="fa-solid back_form fa-arrow-left"
+            onclick="nextPrev(-1)"
+          ></i
+        ></span>
+        <div id="form_1_body_id" class="form_1_body tab">
+          <div class="form_progression">
+            <h4>Personal info</h4>
+            <div class="line"></div>
+            <div class="page_number">1/6</div>
+          </div>
+          <div class="form_1_input_container">
+            <div class="first_last_name">
+              <div class="first_name">
+                <label for="first_name_id">First Name</label>
+                <input
+                  oninput="this.className = ''"
+                  placeholder="Enter Last Name"
+                  type="text"
+                  id="first_name_id"
+                />
+              </div>
 
-                <div class="last_name">
-                  <label for="last_name_id">Last Name</label>
-                  <input
-                    oninput="this.className = ''"
-                    placeholder="Enter Last Name"
-                    type="text"
-                    id="last_name_id"
-                  />
-                </div>
-              </div>
-              <div class="phone_number_container">
-                <label for="phone_number_id">Phone number</label>
+              <div class="last_name">
+                <label for="last_name_id">Last Name</label>
                 <input
                   oninput="this.className = ''"
+                  placeholder="Enter Last Name"
                   type="text"
-                  placeholder="Enter phone number"
-                  id="phone_number_id"
-                />
-              </div>
-              <div class="email_container">
-                <label for="email_id">Enter email</label>
-                <input
-                  oninput="this.className = ''"
-                  type="text"
-                  placeholder="Enter email"
-                  id="email_id"
-                />
-              </div>
-              <div class="profession_container">
-                <label for="profession_id">Profession</label>
-                <input
-                  oninput="this.className = ''"
-                  type="text"
-                  placeholder="Enter profession"
-                  id="profession_id"
-                />
-              </div>
-              <div class="city_container">
-                <label for="city_id">City</label>
-                <input
-                  oninput="this.className = ''"
-                  type="text"
-                  placeholder="Enter city"
-                  id="city_id"
-                />
-              </div>
-              <div class="country_container">
-                <label for="country_id">Country</label>
-                <input
-                  oninput="this.className = ''"
-                  type="text"
-                  placeholder="Enter country"
-                  id="country_id"
-                />
-              </div>
-              <div class="postal_code_container">
-                <label for="postal_code_id">Postal code</label>
-                <input
-                  oninput="this.className = ''"
-                  type="text"
-                  placeholder="Enter postal code"
-                  id="postal_code_id"
+                  id="last_name_id"
                 />
               </div>
             </div>
-            <!-- <div class="next_btn_container">
+            <div class="phone_number_container">
+              <label for="phone_number_id">Phone number</label>
+              <input
+                oninput="this.className = ''"
+                type="text"
+                placeholder="Enter phone number"
+                id="phone_number_id"
+              />
+            </div>
+            <div class="email_container">
+              <label for="email_id">Enter email</label>
+              <input
+                oninput="this.className = ''"
+                type="text"
+                placeholder="Enter email"
+                id="email_id"
+              />
+            </div>
+            <div class="profession_container">
+              <label for="profession_id">Profession</label>
+              <input
+                oninput="this.className = ''"
+                type="text"
+                placeholder="Enter profession"
+                id="profession_id"
+              />
+            </div>
+            <div class="city_container">
+              <label for="city_id">City</label>
+              <input
+                oninput="this.className = ''"
+                type="text"
+                placeholder="Enter city"
+                id="city_id"
+              />
+            </div>
+            <div class="country_container">
+              <label for="country_id">Country</label>
+              <input
+                oninput="this.className = ''"
+                type="text"
+                placeholder="Enter country"
+                id="country_id"
+              />
+            </div>
+            <div class="postal_code_container">
+              <label for="postal_code_id">Postal code</label>
+              <input
+                oninput="this.className = ''"
+                type="text"
+                placeholder="Enter postal code"
+                id="postal_code_id"
+              />
+            </div>
+          </div>
+          <!-- <div class="next_btn_container">
             <button  class="remedy_btn form1_submit_btn" id="formOneNext" onclick="navigateNext(this.id)"
               >Next <span><i class="fa-solid fa-arrow-right"></i></span
             ></button>
           </div> -->
+        </div>
+
+        <!-- form 2 body || work history -->
+
+        <div class="form_2_body tab" id="form_2_body_id">
+          <div class="form_progression">
+            <h4>Work history</h4>
+            <div class="form_2_line"></div>
+            <div class="page_number">2/6</div>
           </div>
-
-          <!-- form 2 body || work history -->
-
-          <div class="form_2_body tab" id="form_2_body_id">
-            <div class="form_progression">
-              <h4>Work history</h4>
-              <div class="form_2_line"></div>
-              <div class="page_number">2/6</div>
+          <div id="form_2_add_detail" class="form_2_added_details_card_parent">
+            <!-- FORM  2 Data Here -->
+          </div>
+          <div class="form_2_input_container">
+            <div class="job_title_container">
+              <label for="job_title_id">Job title</label>
+              <input
+                oninput="this.className = 'form_2_long_inputs'"
+                class="form_2_long_inputs"
+                type="text"
+                placeholder="Enter job title"
+                id="job_title_id"
+              />
             </div>
+            <div class="employer_container">
+              <label for="employer_id">Employer</label>
+              <input
+                oninput="this.className = 'form_2_long_inputs'"
+                class="form_2_long_inputs"
+                type="text"
+                placeholder="Enter employer"
+                id="employer_id"
+              />
+            </div>
+            <div class="city_container_form_2">
+              <label for="city_id_form_2">City</label>
+              <input
+                oninput="this.className = 'form_2_long_inputs'"
+                class="form_2_long_inputs"
+                type="text"
+                placeholder="Enter city"
+                id="city_id_form_2"
+              />
+            </div>
+
+            <div class="country_container_form_2">
+              <label for="country_id_form_2">Country</label>
+              <input
+                oninput="this.className = 'form_2_long_inputs'"
+                class="form_2_long_inputs"
+                type="text"
+                placeholder="Enter country"
+                id="country_id_form_2"
+              />
+            </div>
+            <div class="start_end_date">
+              <div class="start_date">
+                <label for="start_date_id">Start date</label>
+                <input
+                  oninput="this.className = 'form_2_long_inputs'"
+                  class="form_2_long_inputs"
+                  placeholder="Enter Last Name"
+                  type="date"
+                  id="start_date_id"
+                />
+              </div>
+
+              <div class="end_date">
+                <label for="last_name_id">End date</label>
+                <input
+                  oninput="this.className = 'form_2_long_inputs'"
+                  class="form_2_long_inputs"
+                  placeholder="Enter Last Name"
+                  type="date"
+                  id="end_date_id"
+                />
+              </div>
+            </div>
+
             <div
-              id="form_2_add_detail"
-              class="form_2_added_details_card_parent"
+              class="work_status_add_experience_container"
+              id="work_xperience_status_id"
             >
-              <!-- FORM  2 Data Here -->
+              <div class="school_status">
+                <input
+                  oninput="this.className = ''"
+                  onchange=""
+                  type="checkbox"
+                  class="check_school_status"
+                  id="work_here_status"
+                />
+                <p>I currently work here</p>
+              </div>
+              <button
+                type="button"
+                id="add_experience_id"
+                onclick="createWorks()"
+                class="add_experience"
+              >
+                <span><i class="fa-solid fa-square-plus"></i></span>
+                <p>Add another Experience</p>
+              </button>
             </div>
-            <div class="form_2_input_container">
-              <div class="job_title_container">
-                <label for="job_title_id">Job title</label>
-                <input
-                  oninput="this.className = 'form_2_long_inputs'"
-                  class="form_2_long_inputs"
-                  type="text"
-                  placeholder="Enter job title"
-                  id="job_title_id"
-                />
-              </div>
-              <div class="employer_container">
-                <label for="employer_id">Employer</label>
-                <input
-                  oninput="this.className = 'form_2_long_inputs'"
-                  class="form_2_long_inputs"
-                  type="text"
-                  placeholder="Enter employer"
-                  id="employer_id"
-                />
-              </div>
-              <div class="city_container_form_2">
-                <label for="city_id_form_2">City</label>
-                <input
-                  oninput="this.className = 'form_2_long_inputs'"
-                  class="form_2_long_inputs"
-                  type="text"
-                  placeholder="Enter city"
-                  id="city_id_form_2"
-                />
-              </div>
+            <button
+              id="workSaveBtn"
+              onclick="saveWorkEdit()"
+              class="remedy_btn hide_work_btn"
+              type="button"
+            >
+              Save edit
+            </button>
+          </div>
+        </div>
 
-              <div class="country_container_form_2">
-                <label for="country_id_form_2">Country</label>
-                <input
-                  oninput="this.className = 'form_2_long_inputs'"
-                  class="form_2_long_inputs"
-                  type="text"
-                  placeholder="Enter country"
-                  id="country_id_form_2"
-                />
-              </div>
-              <div class="start_end_date">
-                <div class="start_date">
-                  <label for="start_date_id">Start date</label>
-                  <input
-                    oninput="this.className = 'form_2_long_inputs'"
-                    class="form_2_long_inputs"
-                    placeholder="Enter Last Name"
-                    type="date"
-                    id="start_date_id"
-                  />
-                </div>
+        <!-- form 3 body || Job descriptiion -->
 
-                <div class="end_date">
-                  <label for="last_name_id">End date</label>
-                  <input
-                    oninput="this.className = 'form_2_long_inputs'"
-                    class="form_2_long_inputs"
-                    placeholder="Enter Last Name"
-                    type="date"
-                    id="end_date_id"
-                  />
-                </div>
-              </div>
-
-              <div class="work_status_add_experience_container" id="work_xperience_status_id">
-                <div class="school_status">
-                  <input
-                    oninput="this.className = ''"
-                    onchange=""
-                    type="checkbox"
-                    class="check_school_status"
-                    id="work_here_status"
-                  />
-                  <p>I currently work here</p>
-                </div>
-                <button
-                  type="button"
-                  id="add_experience_id"
-                  onclick="createWorks()"
-                  class="add_experience"
-                >
-                  <span><i class="fa-solid fa-square-plus"></i></span>
-                  <p>Add another Experience</p>
-                </button>
-              </div>
-              <button id="workSaveBtn" onclick='saveWorkEdit()' class="remedy_btn hide_work_btn" type="button">Save edit</button>
-            </div>
+        <div id="form_3_body_id" class="form_3_body tab">
+          <div class="form_progression">
+            <h4>Job description</h4>
+            <div class="form_3_line"></div>
+            <div class="page_number">3/6</div>
           </div>
 
-          <!-- form 3 body || Job descriptiion -->
-
-          <div id="form_3_body_id" class="form_3_body tab">
-            <div class="form_progression">
-              <h4>Job description</h4>
-              <div class="form_3_line"></div>
-              <div class="page_number">3/6</div>
-            </div>
-
-            <div id="job_desc_div_container" class="form_3_added_details_card">
-              <div id="job_desc_div" class="added_details_top">
-                <!-- <p>Identify opportunities for new products.
+          <div id="job_desc_div_container" class="form_3_added_details_card">
+            <div id="job_desc_div" class="added_details_top">
+              <!-- <p>Identify opportunities for new products.
                   Analyze how a new product ties in with market needs and consumer preferences.
                   Set design requirements based on briefs from internal teams and external partners.
                   Research materials and techniques
@@ -309,250 +315,267 @@
                   Produce prototypes and test functionality.
                   Improve the design of existing products.
                   Gather feedback from product users</p> -->
+            </div>
+            <div class="added_details_bottom">
+              <button
+                type="button"
+                id="added_details_form_3_click"
+                class="added_details_edit_btn_form_3"
+                onclick="editDesc()"
+              >
+                Edit <i class="fa-solid fa-pen-to-square"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="form_3_input_container">
+            <div class="job_description_container">
+              <label for="job_description_id">Job description</label>
+              <textarea
+                name=""
+                id="job_description_input_id"
+                cols="30"
+                rows="6"
+                class="form_3_long_inputs"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="school_status_add_experience_container">
+            <div class="add_description">
+              <button
+                type="button"
+                id="add_experience_id"
+                onclick="createJobDescr()"
+                class="add_experience"
+              >
+                <span><i class="fa-solid fa-square-plus"></i></span>
+                <p>Add another Description</p>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- form 4 body || Education -->
+
+        <div id="form_4_body_id" class="form_4_body tab">
+          <div class="form_progression">
+            <h4>Education</h4>
+            <div class="form_4_line"></div>
+            <div class="page_number">4/6</div>
+          </div>
+          <!-- added detail beginning -->
+
+          <div
+            id="form_4_add_details"
+            class="form_4_added_details_card_parent"
+          ></div>
+
+          <!-- added detail ending -->
+          <div class="form_4_input_container">
+            <div class="school_name_container">
+              <label for="school_name_id">School Name</label>
+              <input
+                oninput="this.className = 'form_4_long_inputs'"
+                class="form_4_long_inputs"
+                type="text"
+                placeholder="Enter school name"
+                id="school_name_id"
+              />
+            </div>
+            <div class="field_study_container">
+              <label for="field_study_id">Field of study</label>
+              <input
+                oninput="this.className = 'form_4_long_inputs'"
+                class="form_4_long_inputs"
+                type="text"
+                placeholder="Enter field of study"
+                id="field_study_id"
+              />
+            </div>
+            <div class="degree_container">
+              <label for="degree_type_id">Degree</label>
+              <input
+                oninput="this.className = 'form_4_long_inputs'"
+                class="form_4_long_inputs"
+                type="text"
+                placeholder="Select Degree"
+                id="degree_type_id"
+              />
+            </div>
+
+            <div class="city_container_form_4">
+              <label for="city_id_form_4">City</label>
+              <input
+                oninput="this.className = 'form_4_long_inputs'"
+                class="form_4_long_inputs"
+                type="text"
+                placeholder="Enter city"
+                id="city_id_form_4"
+              />
+            </div>
+            <div class="country_container_form_4">
+              <label for="country_id_form_4">Country</label>
+              <input
+                oninput="this.className = 'form_4_long_inputs'"
+                class="form_4_long_inputs"
+                type="text"
+                placeholder="Enter country"
+                id="country_id_form_4"
+              />
+            </div>
+            <div class="start_end_date_form_4">
+              <div class="start_date_form_4">
+                <label for="start_date_form_4_id">Start date</label>
+                <input
+                  oninput="this.className = 'form_4_long_inputs'"
+                  class="form_4_long_inputs"
+                  placeholder="Enter Last Name"
+                  type="date"
+                  id="start_date_form_4_id"
+                />
               </div>
-              <div class="added_details_bottom">
-                <button
-                  type="button"
-                  id="added_details_form_3_click"
-                  class="added_details_edit_btn_form_3"
-                  onclick="editDesc()">
-                  Edit <i class="fa-solid fa-pen-to-square"></i>
-                </button>
-                
+
+              <div class="end_date_form_4">
+                <label for="end_date_form_4_id">End date</label>
+                <input
+                  oninput="this.className = 'form_4_long_inputs'"
+                  class="form_4_long_inputs"
+                  placeholder="Enter Last Name"
+                  type="date"
+                  id="end_date_form_4_id"
+                />
               </div>
             </div>
 
-            <div class="form_3_input_container">
-              <div class="job_description_container">
-                <label for="job_description_id">Job description</label>
-                <textarea
-                  name=""
-                  id="job_description_input_id"
-                  cols="30"
-                  rows="6"
-                  class="form_3_long_inputs"
-                ></textarea>
+            <div
+              id="schoolStatusExpId"
+              class="school_status_add_experience_container"
+            >
+              <div class="school_status">
+                <input
+                  oninput="this.className = ''"
+                  type="checkbox"
+                  id="current_school"
+                  class="check_school_status"
+                />
+                <p>I currently school here</p>
               </div>
-            </div>
-
-            <div class="school_status_add_experience_container">
-              <div class="add_description">
+              <div class="add_experience">
                 <button
                   type="button"
                   id="add_experience_id"
-                  onclick="createJobDescr()"
+                  onclick="createSchoolData()"
                   class="add_experience"
                 >
                   <span><i class="fa-solid fa-square-plus"></i></span>
-                  <p>Add another Description</p>
+                  <p>Add another School</p>
                 </button>
               </div>
             </div>
-          </div>
-
-          <!-- form 4 body || Education -->
-
-          <div id="form_4_body_id" class="form_4_body tab">
-            <div class="form_progression">
-              <h4>Education</h4>
-              <div class="form_4_line"></div>
-              <div class="page_number">4/6</div>
-            </div>
-            <!-- added detail beginning -->
-
-            <div
-              id="form_4_add_details"
-              class="form_4_added_details_card_parent"
-            ></div>
-
-            <!-- added detail ending -->
-            <div class="form_4_input_container">
-              <div class="school_name_container">
-                <label for="school_name_id">School Name</label>
-                <input
-                  oninput="this.className = 'form_4_long_inputs'"
-                  class="form_4_long_inputs"
-                  type="text"
-                  placeholder="Enter school name"
-                  id="school_name_id"
-                />
-              </div>
-              <div class="field_study_container">
-                <label for="field_study_id">Field of study</label>
-                <input
-                  oninput="this.className = 'form_4_long_inputs'"
-                  class="form_4_long_inputs"
-                  type="text"
-                  placeholder="Enter field of study"
-                  id="field_study_id"
-                />
-              </div>
-              <div class="degree_container">
-                <label for="degree_type_id">Degree</label>
-                <input
-                  oninput="this.className = 'form_4_long_inputs'"
-                  class="form_4_long_inputs"
-                  type="text"
-                  placeholder="Select Degree"
-                  id="degree_type_id"
-                />
-              </div>
-
-              <div class="city_container_form_4">
-                <label for="city_id_form_4">City</label>
-                <input
-                  oninput="this.className = 'form_4_long_inputs'"
-                  class="form_4_long_inputs"
-                  type="text"
-                  placeholder="Enter city"
-                  id="city_id_form_4"
-                />
-              </div>
-              <div class="country_container_form_4">
-                <label for="country_id_form_4">Country</label>
-                <input
-                  oninput="this.className = 'form_4_long_inputs'"
-                  class="form_4_long_inputs"
-                  type="text"
-                  placeholder="Enter country"
-                  id="country_id_form_4"
-                />
-              </div>
-              <div class="start_end_date_form_4">
-                <div class="start_date_form_4">
-                  <label for="start_date_form_4_id">Start date</label>
-                  <input
-                    oninput="this.className = 'form_4_long_inputs'"
-                    class="form_4_long_inputs"
-                    placeholder="Enter Last Name"
-                    type="date"
-                    id="start_date_form_4_id"
-                  />
-                </div>
-
-                <div class="end_date_form_4">
-                  <label for="end_date_form_4_id">End date</label>
-                  <input
-                    oninput="this.className = 'form_4_long_inputs'"
-                    class="form_4_long_inputs"
-                    placeholder="Enter Last Name"
-                    type="date"
-                    id="end_date_form_4_id"
-                  />
-                </div>
-              </div>
-
-              <div id="schoolStatusExpId" class="school_status_add_experience_container">
-                <div class="school_status">
-                  <input
-                    oninput="this.className = ''"
-                    type="checkbox"
-                    id="current_school"
-                    class="check_school_status"
-                  />
-                  <p>I currently school here</p>
-                </div>
-                <div class="add_experience">
-                  <button
-                    type="button"
-                    id="add_experience_id"
-                    onclick="createSchoolData()"
-                    class="add_experience"
-                  >
-                    <span><i class="fa-solid fa-square-plus"></i></span>
-                    <p>Add another School</p>
-                  </button>
-                </div>
-              </div>
-              <button id="schoolSaveBtn" class="remedy_btn" onclick="schoolEditSave()" type="button">Save edit</button>
-            </div>
-          </div>
-
-          <!-- form 5 body || skills & cert -->
-
-          <div id="form_5_body_id" class="form_5_body tab">
-            <div class="form_progression">
-              <h4>Skills & Certifications</h4>
-              <div class="form_5_line"></div>
-              <div class="page_number">5/6</div>
-            </div>
-
-            <div
-              id="skills_cert_div_container"
-              class="form_5_added_details_card"
-            >
-              <div id="skill_desc_div" class="added_details_top">
-                <div id="skill_list_id">
-                  <!-- <li class="skill_list"><p>Master in Interaction Design - Parsons School of Design</p>
-                  <button  id='added_details_form_3_click' class="added_details_edit_btn_form_3">Edit <i class="fa-solid fa-pen-to-square"></i></button>
-                </li> -->
-                </div>
-              </div>
-              <div class="added_details_bottom"></div>
-            </div>
-
-            <div class="form_5_input_container">
-              <div class="skills_cert_container">
-                <label for="skills_cert_id">Skills and Certifications</label>
-                <input
-                  oninput="this.className = 'form_5_long_inputs'"
-                  class="form_5_long_inputs"
-                  type="text"
-                  id="skills_cert_id"
-                  placeholder="E.g (User Experience Design-Google UX Course)"
-                />
-              </div>
-            </div>
-
-            <div class="add_skill_cert_container">
-              <div class="add_skill_cert">
-                <button
-                  type="button"
-                  id="add_skill_id"
-                  onclick="createSkillsData()"
-                  class="add_experience"
-                >
-                  <span><i class="fa-solid fa-square-plus"></i></span>
-                  <p>Add another Skill or Certification</p>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- form 6 body || cv package -->
-
-          <div id="form_6_body_id" class="form_6_body tab">
-            <div class="form_progression">
-              <h4>CV Package</h4>
-              <div class="form_6_line"></div>
-              <div class="page_number">6/6</div>
-            </div>
-            <div class="form_6_input_container">
-              <div class="cv_package_container">
-                <label for="cv_package_id">Your package</label>
-                <select id="cv_package_id" class="form_6_long_inputs">
-                  <option>Choose a package</option>
-                  <option value="3000">Basic <span>3000</span></option>
-                  <option value="7500">Standard <span>7500</span></option>
-                  <option value="12000">Premium <span>12000</span></option>
-                </select>
-              </div>
-            </div>
-
-            
-          </div>
-
-          <div class="next_btn_container">
             <button
+              id="schoolSaveBtn"
+              class="remedy_btn"
+              onclick="schoolEditSave()"
               type="button"
-              class="remedy_btn form1_submit_btn"
-              id="next_btn"
-              onclick="nextPrev(1)"
             >
-              Next <span><i class="fa-solid fa-arrow-right"></i></span>
+              Save edit
             </button>
           </div>
-        </form>
+        </div>
+
+        <!-- form 5 body || skills & cert -->
+
+        <div id="form_5_body_id" class="form_5_body tab">
+          <div class="form_progression">
+            <h4>Skills & Certifications</h4>
+            <div class="form_5_line"></div>
+            <div class="page_number">5/6</div>
+          </div>
+
+          <div id="skills_cert_div_container" class="form_5_added_details_card">
+            <div id="skill_desc_div" class="added_details_top">
+              <div id="skill_list_id">
+                <!-- <li class="skill_list"><p>Master in Interaction Design - Parsons School of Design</p>
+                  <button  id='added_details_form_3_click' class="added_details_edit_btn_form_3">Edit <i class="fa-solid fa-pen-to-square"></i></button>
+                </li> -->
+              </div>
+            </div>
+            <div class="added_details_bottom"></div>
+          </div>
+
+          <div class="form_5_input_container">
+            <div class="skills_cert_container">
+              <label for="skills_cert_id">Skills and Certifications</label>
+              <input
+                oninput="this.className = 'form_5_long_inputs'"
+                class="form_5_long_inputs"
+                type="text"
+                id="skills_cert_id"
+                placeholder="E.g (User Experience Design-Google UX Course)"
+              />
+            </div>
+          </div>
+
+          <div class="add_skill_cert_container">
+            <div class="add_skill_cert">
+              <button
+                type="button"
+                id="add_skill_id"
+                onclick="createSkillsData()"
+                class="add_experience"
+              >
+                <span><i class="fa-solid fa-square-plus"></i></span>
+                <p>Add another Skill or Certification</p>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- form 6 body || cv package -->
+
+        <div id="form_6_body_id" class="form_6_body tab">
+          <div class="form_progression">
+            <h4>CV Package</h4>
+            <div class="form_6_line"></div>
+            <div class="page_number">6/6</div>
+          </div>
+          <div class="form_6_input_container">
+            <div class="number_pages_container">
+              <label for="number_pages_id_redesign"
+                >Enter the number of pages you want</label
+              >
+              <input
+                oninput="this.className = 'form_redesign_long_inputs'"
+                class="form_redesign_long_inputs"
+                type="text"
+                placeholder="Enter the number of pages you want"
+                id="number_pages"
+              />
+            </div>
+            <div class="cv_package_container">
+              <label for="cv_package_id">Your package</label>
+              <select id="cv_package_id" class="form_6_long_inputs">
+                <option>Choose a package</option>
+                <option value="1">Basic <span>3000</span></option>
+                <option value="2">Standard <span>7500</span></option>
+                <option value="3">Premium <span>12000</span></option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="next_btn_container">
+          <button
+            type="button"
+            class="remedy_btn form1_submit_btn"
+            id="next_btn"
+            onclick="nextPrev(1)"
+          >
+            Next <span><i class="fa-solid fa-arrow-right"></i></span>
+          </button>
+        </div>
+        <!-- </form> -->
       </section>
     </div>
 
@@ -591,7 +614,7 @@
             </p>
             <div class="sub_input_container">
               <input
-              placeholder="example@gmail.com" 
+                placeholder="example@gmail.com"
                 class="sub_input"
                 id="subscibe_input"
                 type="text"
