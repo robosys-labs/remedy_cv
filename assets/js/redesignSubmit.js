@@ -4,8 +4,8 @@ function payParam() {
   var formData = {
     full_name: document.getElementById("full_name_id").value,
     phone_number: document.getElementById("phoneNumId").value,
-    pages: document.getElementById("number_pages").value,
-    package_id: document.getElementById("cv_package_id").value,
+    pages: parseInt(document.getElementById("number_pages").value),
+    package_id: parseInt(document.getElementById("cv_package_id").value),
     email: document.getElementById("email_id_pay").value,
     cv_file: document.getElementById("cv_file").value,
   };
@@ -28,7 +28,7 @@ function payParam() {
   $.ajax({
     type: "POST",
     url: "https://staging.remedyportal.com/api/v1/cv",
-    data: formData,
+    data: JSON.stringify(formData),
     success: function (data) {
       // Success Page
       console.log("file saved ", data);
