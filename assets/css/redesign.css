@@ -128,7 +128,7 @@ section {
   border-bottom: 2px solid var(--remedy_pink);
 }
 
-.brand_logo{
+.brand_logo {
   max-width: 12rem;
   margin-left: 9vw;
 }
@@ -538,16 +538,19 @@ form .prev_btn:hover {
     display: none;
   }
 
-  .mobile_menu .nav_links , .mobile_menu .nav_button_container , .close_mobile_nav, .hamburger{
+  .mobile_menu .nav_links,
+  .mobile_menu .nav_button_container,
+  .close_mobile_nav,
+  .hamburger {
     display: block;
     position: relative;
     left: 0;
     font-size: 1.8rem;
-}
-.hamburger{
+  }
+  .hamburger {
     position: fixed;
     left: 83vw;
-}
+  }
 
   .mobile_menu {
     width: 80vw;
@@ -683,7 +686,6 @@ footer h6 {
   background-color: #e7e7e8;
   border: 0;
   border-radius: 2rem;
-  
 }
 
 @media screen and (max-width: 420px) {
@@ -706,22 +708,23 @@ footer h6 {
     width: 80%;
   }
 }
-@media screen  and (max-width:420px) {
-  .sub_input_container{
-      margin-top: 1rem;
-      background-color: #e7e7e8;
-      border: 0;
-      border-radius: 2rem;
-      height: 9vh;
-      display: flex;
-      justify-content: space-between;
+@media screen and (max-width: 420px) {
+  .sub_input_container {
+    margin-top: 1rem;
+    background-color: #e7e7e8;
+    border: 0;
+    border-radius: 2rem;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
   }
-  .sub_input{
-      width: 70%;
-      height: 100%;
+
+  .sub_input {
+    width: 70%;
+    height: 100%;
   }
-  .subscribe_submit_btn{
-      width: 26%;
-      height: 100%;
+  .subscribe_submit_btn {
+    width: 26%;
+    height: 100%;
   }
 }

@@ -13,68 +13,67 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   </head>
   <body>
-        <div class="nav_bar">
-          <div class="brand_logo">
-            <a href="/">
-              <img
-                class="remedy_logo"
-                alt="remedyportal logo"
-                src="../assets/img/remedy_logo.png"
-              />
-            </a>
-          </div>
-          <nav class="nav_menu">
-            <ul class="nav_links">
-              <li class="nav_list_item">
-                <a href="/">Home</a>
-              </li>
-              <li class="nav_list_item">
-                <a href="#packages">Packages</a>
-              </li>
-              <li class="nav_list_item">
-                <a href="#works">How it works</a>
-              </li>
-              <li class="nav_list_item">
-                <a href="#about">About</a>
-              </li>
-              <li class="nav_list_item">
-                <a href="#contact">Contact</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="nav_button_container">
-            <button class="remedy_btn get_started">Get started</button>
-          </div>
-          <div class="hamburger" onclick="toggleMenu()">
-            <i class="fa-solid fa-bars"></i>
-          </div>
-          <div class="mobile_menu" id="mob_menu">
-            <div class="close_mobile_nav">
-              <i class="fa-solid fa-xmark" onclick="toggleMenu()"></i>
-            </div>
-            <ul class="nav_links">
-              <li class="nav_list_item">
-                <a href="/">Home</a>
-              </li>
-              <li class="nav_list_item">
-                <a href="#packages">Packages</a>
-              </li>
-              <li class="nav_list_item">
-                <a href="#works">How it works</a>
-              </li>
-              <li class="nav_list_item">
-                <a href="#about">About</a>
-              </li>
-              <li class="nav_list_item">
-                <a href="#contact">Contact</a>
-              </li>
-            </ul>
-            <div class="nav_button_container">
-              <button class="remedy_btn get_started">Get started</button>
-            </div>
-          </div>
+    <div class="nav_bar">
+      <div class="brand_logo">
+        <a href="/">
+          <img
+            class="remedy_logo"
+            alt="remedyportal logo"
+            src="../assets/img/remedy_logo.png"
+          />
+        </a>
+      </div>
+      <nav class="nav_menu">
+        <ul class="nav_links">
+          <li class="nav_list_item">
+            <a href="/">Home</a>
+          </li>
+          <li class="nav_list_item">
+            <a href="#packages">Packages</a>
+          </li>
+          <li class="nav_list_item">
+            <a href="#works">How it works</a>
+          </li>
+          <li class="nav_list_item">
+            <a href="#about">About</a>
+          </li>
+          <li class="nav_list_item">
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="nav_button_container">
+        <button class="remedy_btn get_started">Get started</button>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <div class="mobile_menu" id="mob_menu">
+        <div class="close_mobile_nav">
+          <i class="fa-solid fa-xmark" onclick="toggleMenu()"></i>
         </div>
-
+        <ul class="nav_links">
+          <li class="nav_list_item">
+            <a href="/">Home</a>
+          </li>
+          <li class="nav_list_item">
+            <a href="#packages">Packages</a>
+          </li>
+          <li class="nav_list_item">
+            <a href="#works">How it works</a>
+          </li>
+          <li class="nav_list_item">
+            <a href="#about">About</a>
+          </li>
+          <li class="nav_list_item">
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+        <div class="nav_button_container">
+          <button class="remedy_btn get_started">Get started</button>
+        </div>
+      </div>
+    </div>
 
     <!-- Beginner of FORMs SECTION -->
 
@@ -148,14 +147,10 @@
                   id="cv_package_id"
                   class="form_redesign_long_inputs"
                 >
-                  <option value="null">select your package</option>
-                  <option value="3000">Basic <span> 3000 Naira</span></option>
-                  <option value="7500">
-                    Standard <span> 7500 Naira</span>
-                  </option>
-                  <option value="12000">
-                    Premium <span> 12000 Naira</span>
-                  </option>
+                  <option value="0">select your package</option>
+                  <option value="1">Basic <span> 3000 Naira</span></option>
+                  <option value="2">Standard <span> 7500 Naira</span></option>
+                  <option value="3">Premium <span> 12000 Naira</span></option>
                 </select>
               </div>
               <div class="upload_method_container">
@@ -188,7 +183,8 @@
                   <input
                     type="file"
                     class="choose_file"
-                    id="choose_file_upload"
+                    id="cv_file"
+                    name="cv_file"
                     accept="image/png, image/jpg, image/gif, image/jpeg, image/pdf"
                   />
                 </div>
@@ -258,9 +254,12 @@
               existing products and offers
             </p>
             <div class="sub_input_container">
-              <input class="sub_input" 
-              placeholder="example@gmail.com" 
-              id="subscibe_input" type="text" />
+              <input
+                class="sub_input"
+                placeholder="example@gmail.com"
+                id="subscibe_input"
+                type="text"
+              />
               <button class="subscribe_submit_btn">
                 <i class="fa-solid fa-paper-plane"></i>
               </button>
